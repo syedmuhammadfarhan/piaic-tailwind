@@ -39,12 +39,12 @@ export default function Navbar() {
             <Image
               src="/PIAICLogo.webp"
               alt="piaiclogo"
-              width={70}
-              height={70}
+              width={50}
+              height={50}
             />
             <AiOutlineClose />
           </div>
-          <div className="text-center leading-10 p-32">
+          <div className="text-center leading-10 py-32">
             <ul>
               <li className="hover:border-b">
                 <Link href="/">Home</Link>
