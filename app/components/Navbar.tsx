@@ -1,9 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar() {
+  const [mobNav, setMobNav] = useState(false);
   return (
     <div className="flex w-full max-w-full justify-between items-center pt-3">
       <div className="flex gap-10">
@@ -30,7 +32,7 @@ export default function Navbar() {
         <Link href="https://portal.piaic.org/">Apply</Link>
       </button>
       {/* mobile navbar */}
-      <div className="md:hidden">
+      <div onClick={() => setMobNav(!mobNav)} className="md:hidden">
         <AiOutlineMenu size="25" />
       </div>
       <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/90">
@@ -42,7 +44,7 @@ export default function Navbar() {
               width={50}
               height={50}
             />
-            <AiOutlineClose />
+            <AiOutlineClose onClick={() => setMobNav(!mobNav)} />
           </div>
           <div className="text-center leading-10 py-32">
             <ul>
