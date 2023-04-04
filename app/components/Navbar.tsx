@@ -1,15 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar() {
+  const [mobNav, setMobNav] = useState(false);
+
   return (
-    <div className="flex w-full max-w-full justify-between items-center pt-3">
+    <div className="flex w-full max-w-full justify-between items-center mt-3">
       <div className="flex gap-10">
         <Image
-          className="ml-5 -mb-11"
+          className="ml-5 md:-mb-11"
           src="/PIAICLogo.webp"
           alt="piaiclogo"
           width={70}
@@ -27,42 +29,61 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-      <button className="hidden md:flex bg-emerald-600 m-2 mr-4 px-3.5 py-1.5 rounded-3xl text-white">
+      <button className="hidden md:flex bg-emerald-600 m-2 mr-4 px-5 py-2 rounded-full text-white text-sm hover:bg-green-500">
         <Link href="https://portal.piaic.org/">Apply</Link>
       </button>
+
       {/* mobile navbar */}
-      <div className="md:hidden">
-        <AiOutlineMenu size="25" />
+      <div onClick={() => setMobNav(!mobNav)} className="md:hidden">
+        <AiOutlineMenu size="25" className="cursor-pointer" />
       </div>
-      <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
-        <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-white p-10 ease-in duration-500">
-          <div className="flex justify-between">
-            <Image
-              src="/PIAICLogo.webp"
-              alt="piaiclogo"
-              width={50}
-              height={50}
-            />
-            <AiOutlineClose />
-          </div>
-          <div className="text-center leading-10 py-32">
-            <ul>
-              <li className="hover:border-b">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="hover:border-b">
-                <Link href="/">About us</Link>
-              </li>
-              <li className="hover:border-b">
-                <Link href="/">Contact Us</Link>
-              </li>
-              <li className="hover:border-b">
-                <Link href="/">Apply</Link>
-              </li>
-            </ul>
+
+      {mobNav && (
+        <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
+          <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-white p-10 ease-in duration-500">
+            <div className="flex justify-between">
+              <Image
+                src="/PIAICLogo.webp"
+                alt="piaiclogo"
+                width={50}
+                height={50}
+              />
+              <AiOutlineClose
+                onClick={() => setMobNav(!mobNav)}
+                className="cursor-pointer"
+              />
+            </div>
+            <div className="text-center leading-10 py-32">
+              <ul>
+                <li
+                  onClick={() => setMobNav(!mobNav)}
+                  className="hover:border-b"
+                >
+                  <Link href="/">Home</Link>
+                </li>
+                <li
+                  onClick={() => setMobNav(!mobNav)}
+                  className="hover:border-b"
+                >
+                  <Link href="/">About us</Link>
+                </li>
+                <li
+                  onClick={() => setMobNav(!mobNav)}
+                  className="hover:border-b"
+                >
+                  <Link href="/">Contact Us</Link>
+                </li>
+                <li
+                  onClick={() => setMobNav(!mobNav)}
+                  className="hover:border-b"
+                >
+                  <Link href="https://portal.piaic.org/">Apply</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
