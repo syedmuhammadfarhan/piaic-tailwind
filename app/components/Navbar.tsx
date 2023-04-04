@@ -1,14 +1,10 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { useState } from "react";
 
 export default function Navbar() {
-
-
-
   return (
     <div className="flex w-full max-w-full justify-between items-center pt-3">
       <div className="flex gap-10">
