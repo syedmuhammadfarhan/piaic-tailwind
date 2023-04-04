@@ -3,7 +3,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="h-screen bg-gradient-to-r from-blue-200 to-green-100">
+    //  bg-[url('/bg1.jpeg')]
+    <div className="h-auto bg-gradient-to-r from-blue-200 to-green-100 bg-opacity-0">
       <div className="md:flex items-center">
         <div className="md:w-1/4 px-12 pt-10 items-center">
           <Image
@@ -14,9 +15,7 @@ export default function Hero() {
           />
         </div>
         <div className="md:w-3/4 p-5 ">
-          <h1 className="text-4xl font-bold mb-2">
-            Presidential Initiative
-          </h1>
+          <h1 className="text-4xl font-bold mb-2">Presidential Initiative</h1>
           <div className="text-3xl mb-2">
             <h1>for Artificial Intelligence & Computing</h1>
           </div>

@@ -18,10 +18,10 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </li>
           <li className="hover:border-b border-green-500 text-sm">
-            <Link href="/">About us</Link>
+            <Link href="/">About</Link>
           </li>
           <li className="hover:border-b border-green-500 text-sm">
-            <Link href="/">Contact Us</Link>
+            <Link href="/">Contact</Link>
           </li>
         </ul>
       </div>
@@ -30,7 +30,7 @@ export default function Navbar() {
       </button>
 
       {/* mobile navbar */}
-      <div onClick={() => setMobNav(!mobNav)} className="md:hidden">
+      <div onClick={() => setMobNav(!mobNav)} className="md:hidden hover:drop-shadow-md">
         <AiOutlineMenu size="25" className="cursor-pointer mr-1.5 m-1.5" />
       </div>
 
@@ -61,13 +61,13 @@ export default function Navbar() {
                   onClick={() => setMobNav(!mobNav)}
                   className="hover:border-b"
                 >
-                  <Link href="/">About us</Link>
+                  <Link href="/">About</Link>
                 </li>
                 <li
                   onClick={() => setMobNav(!mobNav)}
                   className="hover:border-b"
                 >
-                  <Link href="/">Contact Us</Link>
+                  <Link href="/">Contact</Link>
                 </li>
                 <li
                   onClick={() => setMobNav(!mobNav)}
