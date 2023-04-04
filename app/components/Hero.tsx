@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className="h-screen bg-gradient-to-r from-blue-200 to-green-100">
       <div className="md:flex items-center">
-        <div className="md:w-1/4 m-10 ml-12 items-center">
+        <div className="md:w-1/4 px-12 pt-10 items-center">
           <Image
             src="/president.png"
             alt="arif alvi"

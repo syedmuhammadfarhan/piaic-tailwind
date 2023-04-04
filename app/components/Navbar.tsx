@@ -8,23 +8,19 @@ export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
 
   return (
-    <div className="flex w-full max-w-full justify-between items-center mt-3">
-      <div className="flex gap-10">
-        <Image
-          className="ml-5 md:-mb-11"
-          src="/PIAICLogo.webp"
-          alt="piaiclogo"
-          width={70}
-          height={70}
-        />
+    <div className="flex w-full max-w-full justify-between items-center">
+      <div className="flex gap-10 mt-1">
+        <div className="hidden md:flex ml-5 md:-mb-11">
+          <Image src="/PIAICLogo.webp" alt="piaiclogo" width={60} height={60} />
+        </div>
         <ul className="hidden md:flex gap-10 items-center">
-          <li className="hover:border-b">
+          <li className="hover:border-b border-green-500 text-sm">
             <Link href="/">Home</Link>
           </li>
-          <li className="hover:border-b">
+          <li className="hover:border-b border-green-500 text-sm">
             <Link href="/">About us</Link>
           </li>
-          <li className="hover:border-b">
+          <li className="hover:border-b border-green-500 text-sm">
             <Link href="/">Contact Us</Link>
           </li>
         </ul>
@@ -35,25 +31,25 @@ export default function Navbar() {
 
       {/* mobile navbar */}
       <div onClick={() => setMobNav(!mobNav)} className="md:hidden">
-        <AiOutlineMenu size="25" className="cursor-pointer" />
+        <AiOutlineMenu size="25" className="cursor-pointer mr-1.5 m-1.5" />
       </div>
 
       {mobNav && (
         <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
-          <div className="fixed left-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-white p-10 ease-in duration-500">
+          <div className="fixed right-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-green-100 p-4 ease-in duration-500">
             <div className="flex justify-between">
               <Image
                 src="/PIAICLogo.webp"
                 alt="piaiclogo"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               />
               <AiOutlineClose
                 onClick={() => setMobNav(!mobNav)}
                 className="cursor-pointer"
               />
             </div>
-            <div className="text-center leading-10 py-32">
+            <div className="text-center leading-10 py-24">
               <ul>
                 <li
                   onClick={() => setMobNav(!mobNav)}
