@@ -14,13 +14,13 @@ export default function Navbar() {
           <Image src="/PIAICLogo.webp" alt="piaiclogo" width={60} height={60} />
         </div>
         <ul className="hidden md:flex gap-10 items-center">
-          <li className="hover:border-b border-green-500 text-sm">
+          <li className="hover:border-b-2 border-green-500 text-sm">
             <Link href="/">Home</Link>
           </li>
-          <li className="hover:border-b border-green-500 text-sm">
+          <li className="hover:border-b-2 border-green-500 text-sm">
             <Link href="/">About</Link>
           </li>
-          <li className="hover:border-b border-green-500 text-sm">
+          <li className="hover:border-b-2 border-green-500 text-sm">
             <Link href="/">Contact</Link>
           </li>
         </ul>
@@ -53,25 +53,21 @@ export default function Navbar() {
               <ul>
                 <li
                   onClick={() => setMobNav(!mobNav)}
-                  className="hover:border-b"
                 >
                   <Link href="/">Home</Link>
                 </li>
                 <li
                   onClick={() => setMobNav(!mobNav)}
-                  className="hover:border-b"
                 >
                   <Link href="/">About</Link>
                 </li>
                 <li
                   onClick={() => setMobNav(!mobNav)}
-                  className="hover:border-b"
                 >
                   <Link href="/">Contact</Link>
                 </li>
                 <li
                   onClick={() => setMobNav(!mobNav)}
-                  className="hover:border-b"
                 >
                   <Link href="https://portal.piaic.org/">Apply</Link>
                 </li>
