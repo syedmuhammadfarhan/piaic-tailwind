@@ -8,7 +8,7 @@ export default function Partners() {
         <h1 className="text-4xl font-bold m-6 border-b-8 border-green-300 max-w-fit">
           Strategic Partners
         </h1>
-        <div className="flex max-w-fit m-8">
+        <div className="md:flex max-w-fit m-8">
           <Image
             className="m-6"
             src="/saylaniLogo.png"
