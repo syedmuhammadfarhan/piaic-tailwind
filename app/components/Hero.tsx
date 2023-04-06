@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Hero() {
   return (
     //  bg-[url('/bg1.jpeg')]
-    <div className="h-auto bg-gradient-to-r from-blue-200 to-green-100 bg-opacity-0">
+    <div className="h-auto bg-gradient-to-r from-blue-200 to-green-100">
       <div className="md:flex items-center">
-        <div className="md:w-1/4 px-12 pt-10 items-center">
+        <div className="md:w-1/4 px-14 pt-10 items-center">
           <Image
             src="/president.png"
             alt="arif alvi"
