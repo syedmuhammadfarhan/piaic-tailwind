@@ -13,13 +13,27 @@ export default function Footer() {
           </Link>
         </div>
         <div className="bg-white p-2 rounded-xl mr-3 hover:scale-110">
+          <Link
+            href={
+              "https://twitter.com/piaicofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+            }
+            target="blank"
+          ></Link>
           <FaTwitter size={15} />
         </div>
         <div className="bg-white p-2 rounded-xl mr-3 hover:scale-110">
-          <FaInstagram size={15} />
+          <Link
+            href={"https://www.instagram.com/piaicofficial/?hl=en"}
+            target="blank"
+          >
+            <FaInstagram size={15} />
+          </Link>
         </div>
         <div className="bg-white p-2 rounded-xl hover:scale-110">
-          <Link href={"https://www.facebook.com/groups/piaic/"} target="blank">
+          <Link
+            href={"https://www.youtube.com/channel/UC2Makv_pLAtvrjHNgg-pBLg"}
+            target="blank"
+          >
             <FaYoutube size={15} />
           </Link>
         </div>

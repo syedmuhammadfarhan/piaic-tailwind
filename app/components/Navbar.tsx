@@ -9,18 +9,19 @@ export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
 
   return (
-    <div className="flex w-full max-w-full justify-between items-center">
+    <div className="sticky top-0 bg-white flex w-full max-w-full justify-between items-center">
       <div className="flex gap-10 mt-1">
         <div className="hidden md:flex ml-5 md:-mb-11">
           <Image src="/PIAICLogo.webp" alt="piaiclogo" width={60} height={60} />
         </div>
-        <RevealWrapper className="items-center flex"
+        <RevealWrapper
+          className="items-center flex"
           // rotate={{ x: 12, y: 40, z: 0 }}
           origin="right"
           delay={200}
           duration={1000}
           distance="1000px"
-          reset={true}
+          reset={false}
           // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
         >
           <ul className="hidden md:flex gap-10 items-center">
@@ -28,7 +29,7 @@ export default function Navbar() {
               <Link href="/">Home</Link>
             </li>
             <li className="hover:border-b-2 border-green-500 text-sm">
-              <Link href="/">About</Link>
+              <Link href="./About">About</Link>
             </li>
             <li className="hover:border-b-2 border-green-500 text-sm">
               <Link href="/">Contact</Link>
