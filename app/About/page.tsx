@@ -5,7 +5,7 @@ import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 export default function About() {
   return (
-    <div className="h-screen bg-gradient-to-r from-blue-200 to-green-100 border-slate-200 border-x-8">
+    <div className="h-auto md:h-max bg-gradient-to-r from-blue-200 to-green-100 border-slate-200 border-x-8">
       <center className="pt-10">
         <div className="w-36 h-36 rounded-full border-2 border-lime-600 overflow-hidden">
           <Image
@@ -36,7 +36,7 @@ export default function About() {
               </Link>
             </div>
           </div>
-          <p className="text-sm text-justify px-32 my-10">
+          <p className="text-sm text-justify px-14 md:px-32 pb-14 mt-10">
             Dr. Arif Alvi was sworn in as the 13th President of Islamic Republic
             of Pakistan on 9th September 2018. Dr. Arif Alvi was born in 1949
             and completed his early education in Karachi. He did his Bachelor of

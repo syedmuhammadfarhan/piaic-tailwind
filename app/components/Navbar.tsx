@@ -3,7 +3,11 @@ import { RevealWrapper } from "next-reveal";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineDoubleRight,
+  AiOutlineMenu,
+} from "react-icons/ai";
 
 export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
@@ -37,8 +41,15 @@ export default function Navbar() {
           </ul>
         </RevealWrapper>
       </div>
-      <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-5 py-2 rounded-full text-white text-sm hover:bg-green-500">
-        <Link href="https://portal.piaic.org/">Apply</Link>
+
+      <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-4 py-2 rounded-full text-white text-sm hover:bg-green-500">
+        <Link
+          className="flex items-center gap-1"
+          href="https://portal.piaic.org/"
+        >
+          Apply
+          <AiOutlineDoubleRight size={13} />
+        </Link>
       </button>
 
       {/* mobile navbar */}
@@ -70,7 +81,7 @@ export default function Navbar() {
                   <Link href="/">Home</Link>
                 </li>
                 <li onClick={() => setMobNav(!mobNav)}>
-                  <Link href="/">About</Link>
+                  <Link href="/About">About</Link>
                 </li>
                 <li onClick={() => setMobNav(!mobNav)}>
                   <Link href="/">Contact</Link>
