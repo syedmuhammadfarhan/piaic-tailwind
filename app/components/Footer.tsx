@@ -7,12 +7,12 @@ export default function Footer() {
   return (
     <div className="flex justify-between items-center bg-gradient-to-r from-blue-200 to-green-100 pl-3">
       <div className="flex justify-between">
-        <div className="bg-white p-2 rounded-xl mr-3 hover:scale-110">
+        <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
           <Link href={"https://www.facebook.com/groups/piaic/"} target="blank">
             <FaFacebook size={15} />
           </Link>
         </div>
-        <div className="bg-white p-2 rounded-xl mr-3 hover:scale-110">
+        <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
           <Link
             href={
               "https://twitter.com/piaicofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
@@ -21,7 +21,7 @@ export default function Footer() {
           ></Link>
           <FaTwitter size={15} />
         </div>
-        <div className="bg-white p-2 rounded-xl mr-3 hover:scale-110">
+        <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
           <Link
             href={"https://www.instagram.com/piaicofficial/?hl=en"}
             target="blank"

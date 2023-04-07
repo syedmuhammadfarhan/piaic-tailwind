@@ -6,7 +6,7 @@ export default function Hero() {
     //  bg-[url('/bg1.jpeg')]
     <div className="h-auto bg-gradient-to-r from-blue-200 to-green-100">
       <div className="md:flex items-center">
-        <div className="md:w-1/3 px-14 pt-10 items-center">
+        <div className="md:basis-1/3 px-14 pt-10 items-center">
           <Image
             src="/president.png"
             alt="arif alvi"
@@ -14,7 +14,7 @@ export default function Hero() {
             height={300}
           />
         </div>
-        <div className="md:w-2/3 p-5 ">
+        <div className="md:basis-2/3 p-5 ">
           <h1 className="text-4xl font-bold mb-2">Presidential Initiative</h1>
           <div className="text-3xl mb-2">
             <h1>for Artificial Intelligence & Computing</h1>
