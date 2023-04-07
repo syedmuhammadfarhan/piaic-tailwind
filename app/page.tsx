@@ -1,14 +1,14 @@
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
 import Programs from "./components/Programs";
 import Partners from "./components/Partners";
-import Footer from "./components/Footer";
+import Courses1 from "./components/Courses1";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Programs />
+      <Courses1/>
       <Partners />
     </>
   );

@@ -41,7 +41,7 @@ export default function About() {
               </Link>
             </div>
           </div>
-          <p className="text-sm text-justify px-14 md:px-32 pb-14 mt-10">
+          <p className="text-sm text-justify px-8 md:px-32 pb-14 mt-10">
             {aboutData.message}
           </p>
         </div>

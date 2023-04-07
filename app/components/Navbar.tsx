@@ -9,6 +9,21 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
+const navItems = [
+  {
+    navList: "Home",
+    href: "./",
+  },
+  {
+    navList: "About",
+    href: "./About",
+  },
+  {
+    navList: "Contact",
+    href: "./Contact",
+  },
+];
+
 export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
 
@@ -29,15 +44,13 @@ export default function Navbar() {
           // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
         >
           <ul className="hidden md:flex gap-10 items-center">
-            <li className="hover:border-b-2 border-green-500 text-sm">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="hover:border-b-2 border-green-500 text-sm">
-              <Link href="./About">About</Link>
-            </li>
-            <li className="hover:border-b-2 border-green-500 text-sm">
-              <Link href="/">Contact</Link>
-            </li>
+            {navItems.map((items: { navList: string; href: string }) => {
+              return (
+                <li className="hover:border-b-2 border-green-500 text-sm font-semibold">
+                  <Link href={items.href}>{items.navList}</Link>
+                </li>
+              );
+            })}
           </ul>
         </RevealWrapper>
       </div>
@@ -52,7 +65,7 @@ export default function Navbar() {
         </Link>
       </button>
 
-      {/* mobile navbar */}
+      {/* Hamburger */}
       <div
         onClick={() => setMobNav(!mobNav)}
         className="md:hidden hover:drop-shadow-md"
@@ -60,8 +73,13 @@ export default function Navbar() {
         <AiOutlineMenu size="25" className="cursor-pointer mr-1.5 m-1.5" />
       </div>
 
+      {/* onClick Hamburger menu */}
+
       {mobNav && (
-        <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
+        <div
+          className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+          onClick={() => setMobNav(!mobNav)}
+        >
           <div className="fixed right-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-gradient-to-r from-blue-200 to-green-100 p-4 ease-in duration-500">
             <div className="flex justify-between">
               <Image
@@ -77,18 +95,11 @@ export default function Navbar() {
             </div>
             <div className="text-center leading-10 py-24">
               <ul>
-                <li onClick={() => setMobNav(!mobNav)}>
-                  <Link href="/">Home</Link>
-                </li>
-                <li onClick={() => setMobNav(!mobNav)}>
-                  <Link href="/About">About</Link>
-                </li>
-                <li onClick={() => setMobNav(!mobNav)}>
-                  <Link href="/">Contact</Link>
-                </li>
-                <li onClick={() => setMobNav(!mobNav)}>
-                  <Link href="https://portal.piaic.org/">Apply</Link>
-                </li>
+                {navItems.map((items: { navList: string; href: string }) => (
+                  <li onClick={() => setMobNav(!mobNav)}>
+                    <Link href={items.href}>{items.navList}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
