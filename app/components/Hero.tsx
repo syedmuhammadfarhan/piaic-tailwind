@@ -6,7 +6,7 @@ export default function Hero() {
     //  bg-[url('/bg1.jpeg')]
     <div className="h-auto bg-gradient-to-r from-blue-200 to-green-100">
       <div className="md:flex items-center">
-        <div className="md:basis-1/3 px-14 pt-10 items-center">
+        <div className="md:basis-2/4 px-14 pt-10 items-center">
           <Image
             src="/president.png"
             alt="arif alvi"
@@ -14,12 +14,12 @@ export default function Hero() {
             height={300}
           />
         </div>
-        <div className="md:basis-2/3 p-5 ">
-          <h1 className="text-4xl font-bold mb-2">Presidential Initiative</h1>
-          <div className="text-3xl mb-2">
+        <div className="md:basis-3/4 p-7 ">
+          <h1 className="text-4xl font-bold mb-2 text-center md:text-start">Presidential Initiative</h1>
+          <div className="text-3xl mb-2 text-center md:text-start">
             <h1>for Artificial Intelligence & Computing</h1>
           </div>
-          <div className="md:pr-4 lg:pr-52 leading-7 base:textalign-center text-justify sm:text-md">
+          <div className="md:pr-4 lg:pr-52 leading-7 text-justify text-md text-slate-500">
             <p>
               The mission of PIAIC is to reshape Pakistan by revolutionizing
               education, research, and business by adopting latest, cutting-edge

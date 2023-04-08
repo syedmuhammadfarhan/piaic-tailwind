@@ -9,8 +9,9 @@ export default function Partners() {
       <h1 className="text-4xl font-bold m-6 border-b-4 border-green-300 max-w-fit">
         Strategic Partners
       </h1>
+
       <RevealWrapper>
-        <div className="md:flex justify-center m-6">
+        <div className="md:flex justify-center mb-10">
           <Image
             className="m-6"
             src="/saylaniLogo.png"
