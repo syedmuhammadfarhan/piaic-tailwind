@@ -1,14 +1,15 @@
 import React from "react";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 export default function Programs() {
   return (
     <div>
       <center>
-        <h1 className="text-4xl font-bold m-4 border-b-4 border-green-300 max-w-fit">
+        <h1 className="text-4xl font-bold mt-14 mb-3 max-w-fit">
           Available Programs
         </h1>
 
-        <p className="text-md text-slate-500 md:px-20 text-justify px-8">
+        <p className="text-md text-slate-500 md:px-24 text-justify px-8">
           This curriculum is intended for beginners who want to learn software
           development from the ground up. The first three quarters are shared by
           all specialties and are dedicated to studying Object-Oriented
@@ -21,7 +22,7 @@ export default function Programs() {
           weekdays. It employs a hybrid teaching format, with core onsite
           classes complemented by online Zoom laboratories and recorded videos.
         </p>
-        <div className="md:animate-bounce w-10 h-10 rounded-full border-2 border-black flex justify-center items-center">
+        <div className="md:animate-bounce w-10 h-10 rounded-full border-2 border-black flex justify-center items-center mt-10"><AiOutlineArrowDown/>
           
         </div>
       </center>

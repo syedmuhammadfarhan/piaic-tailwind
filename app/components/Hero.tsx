@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     //  bg-[url('/bg1.jpeg')]
-    <div className="h-auto bg-gradient-to-r from-blue-200 to-green-100">
+    <div className="h-auto bg-gradient-to-r from-blue-300 to-green-200">
       <div className="md:flex items-center">
         <div className="md:basis-2/4 px-14 pt-10 items-center">
           <Image

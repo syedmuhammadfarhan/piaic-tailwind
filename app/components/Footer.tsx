@@ -5,7 +5,7 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="flex justify-between items-center bg-gradient-to-r from-blue-200 to-green-100 pl-3">
+    <div className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-green-200 pl-3">
       <div className="flex justify-between">
         <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
           <Link href={"https://www.facebook.com/groups/piaic/"} target="blank">

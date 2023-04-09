@@ -68,7 +68,7 @@ export default function Navbar() {
       {/* Hamburger */}
       <div
         onClick={() => setMobNav(!mobNav)}
-        className="md:hidden hover:drop-shadow-md"
+        className="md:hidden"
       >
         <AiOutlineMenu size="25" className="cursor-pointer mr-1.5 m-1.5" />
       </div>
@@ -93,7 +93,7 @@ export default function Navbar() {
                 className="cursor-pointer"
               />
             </div>
-            <div className="text-center leading-10 py-24">
+            <div className="text-center leading-10 py-10">
               <ul>
                 {navItems.map((items: { navList: string; href: string }) => (
                   <li onClick={() => setMobNav(!mobNav)}>
