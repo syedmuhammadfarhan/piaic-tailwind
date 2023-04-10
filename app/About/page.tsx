@@ -12,7 +12,7 @@ const aboutData = {
 
 export default function About() {
   return (
-    <div className="h-auto md:h-max bg-gradient-to-r from-blue-200 to-green-100 border-slate-200 border-x-8">
+    <div className="flex items-stretch min-h-screen bg-gradient-to-r from-blue-200 to-green-100 border-slate-200 border-x-8">
       <center className="pt-10">
         <div className="w-36 h-36 rounded-full border-2 border-lime-600 overflow-hidden">
           <Image
@@ -27,7 +27,7 @@ export default function About() {
           <h1 className="text-2xl mt-4">{aboutData.name}</h1>
           <p className="text-sm text-slate-400 mb-4">{aboutData.designation}</p>
           <div className="flex justify-center">
-            <div className=" bg-sky-600 p-2 rounded-xl mr-3 hover:scale-110">
+            <div className=" bg-white p-2 rounded-xl mr-3 hover:scale-110">
               <Link
                 href={"https://www.facebook.com/Dr.ArifAlvi/"}
                 target="blank"
@@ -35,13 +35,13 @@ export default function About() {
                 <FaFacebook size={15} />
               </Link>
             </div>
-            <div className=" bg-sky-400 p-2 rounded-xl mr-3 hover:scale-110">
+            <div className=" bg-white p-2 rounded-xl mr-3 hover:scale-110">
               <Link href={"https://twitter.com/ArifAlvi"} target="blank">
                 <FaTwitter size={15} />
               </Link>
             </div>
           </div>
-          <p className="text-sm text-justify px-8 md:px-32 pb-14 mt-10">
+          <p className="text-sm text-justify px-8 md:px-32 pb-14 mt-10 pb-8">
             {aboutData.message}
           </p>
         </div>
