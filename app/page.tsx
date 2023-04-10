@@ -1,7 +1,7 @@
 import Hero from "./components/Hero";
 import Programs from "./components/Programs";
 import Partners from "./components/Partners";
-import Courses1 from "./components/Courses1";
+import Courses1 from "./components/Courses";
 
 export default function Home() {
   return (

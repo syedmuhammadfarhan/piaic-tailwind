@@ -32,12 +32,12 @@ export default function About() {
                 href={"https://www.facebook.com/Dr.ArifAlvi/"}
                 target="blank"
               >
-                <FaFacebook size={15} />
+                <FaFacebook size={13} />
               </Link>
             </div>
             <div className=" bg-white p-2 rounded-xl mr-3 hover:scale-110">
               <Link href={"https://twitter.com/ArifAlvi"} target="blank">
-                <FaTwitter size={15} />
+                <FaTwitter size={13} />
               </Link>
             </div>
           </div>

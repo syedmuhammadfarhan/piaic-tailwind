@@ -7,26 +7,26 @@ export default function Footer() {
   return (
     <div className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-green-200 pl-3">
       <div className="flex justify-between">
-        <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
+        <div className="bg-white p-2 rounded-xl mr-1 hover:scale-110">
           <Link href={"https://www.facebook.com/groups/piaic/"} target="blank">
-            <FaFacebook size={15} />
+            <FaFacebook size={13} />
           </Link>
         </div>
-        <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
+        <div className="bg-white p-2 rounded-xl mr-1 hover:scale-110">
           <Link
             href={
               "https://twitter.com/piaicofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
             }
             target="blank"
           ></Link>
-          <FaTwitter size={15} />
+          <FaTwitter size={13} />
         </div>
-        <div className="bg-white p-2 rounded-xl mr-2 hover:scale-110">
+        <div className="bg-white p-2 rounded-xl mr-1 hover:scale-110">
           <Link
             href={"https://www.instagram.com/piaicofficial/?hl=en"}
             target="blank"
           >
-            <FaInstagram size={15} />
+            <FaInstagram size={13} />
           </Link>
         </div>
         <div className="bg-white p-2 rounded-xl hover:scale-110">
@@ -34,12 +34,12 @@ export default function Footer() {
             href={"https://www.youtube.com/channel/UC2Makv_pLAtvrjHNgg-pBLg"}
             target="blank"
           >
-            <FaYoutube size={15} />
+            <FaYoutube size={13} />
           </Link>
         </div>
       </div>
       <div>
-        <p className="text-xs mx-4 pt-2">Powered by</p>
+        <p className="text-xs mx-3 pt-2">Powered by</p>
 
         <Image
           className="mx-2"

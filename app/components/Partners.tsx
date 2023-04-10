@@ -10,7 +10,7 @@ export default function Partners() {
         Strategic Partners
       </h1>
 
-      <RevealWrapper mobile={false}>
+      <RevealWrapper mobile={false} reset={true}>
         <div className="md:flex justify-center mb-10">
           <Image
             className="m-6"
