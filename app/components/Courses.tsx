@@ -8,7 +8,7 @@ import { RevealWrapper } from "next-reveal";
 export default function Courses1() {
   return (
     <center>
-      <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-4 m-5">
+      <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-3 mt-8 mb-16">
         {Courses.map(
           (items: { image: string; courseName: string; href: string }, i) => {
             return (
