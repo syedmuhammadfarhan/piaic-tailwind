@@ -44,9 +44,12 @@ export default function Navbar() {
           // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
         >
           <ul className="hidden md:flex gap-10 items-center">
-            {navItems.map((items: { navList: string; href: string }) => {
+            {navItems.map((items: { navList: string; href: string }, i) => {
               return (
-                <li className="hover:border-b-2 border-green-500 text-sm font-semibold">
+                <li
+                  key={i}
+                  className="hover:border-b-2 border-green-500 text-sm font-semibold"
+                >
                   <Link href={items.href}>{items.navList}</Link>
                 </li>
               );
@@ -66,10 +69,7 @@ export default function Navbar() {
       </button>
 
       {/* Hamburger */}
-      <div
-        onClick={() => setMobNav(!mobNav)}
-        className="md:hidden"
-      >
+      <div onClick={() => setMobNav(!mobNav)} className="md:hidden">
         <AiOutlineMenu size="25" className="cursor-pointer mr-1.5 m-1.5" />
       </div>
 
@@ -95,8 +95,8 @@ export default function Navbar() {
             </div>
             <div className="text-center leading-10 py-10">
               <ul>
-                {navItems.map((items: { navList: string; href: string }) => (
-                  <li onClick={() => setMobNav(!mobNav)}>
+                {navItems.map((items: { navList: string; href: string }, i) => (
+                  <li onClick={() => setMobNav(!mobNav)} key={i}>
                     <Link href={items.href}>{items.navList}</Link>
                   </li>
                 ))}
