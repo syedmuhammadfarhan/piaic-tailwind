@@ -4,7 +4,7 @@ import React from "react";
 export default function Wmd() {
   return (
     <>
-      <div className="md:flex justify-between h-1/3 bg-gradient-to-r from-blue-300 to-green-200 px-8">
+      {/* <div className="md:flex justify-between h-1/3 bg-gradient-to-r from-blue-300 to-green-200 px-8">
         <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
           <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
             Web 3.0 (Blockchain) and Metaverse Specialization
@@ -25,8 +25,8 @@ export default function Wmd() {
             width={350}
           />
         </div>
-      </div>
-      <div className="text-center">
+      </div> */}
+      {/* <div className="text-center">
         <h2 className="text-3xl font-extrabold mt-10 mb-2">
           Program of Studies
         </h2>
@@ -43,8 +43,9 @@ export default function Wmd() {
           weekdays. It employs a hybrid teaching format, with core onsite
           classes complemented by online Zoom laboratories and recorded videos.
         </p>
-      </div>
-      <div className="w-96 h-auto shadow-2xl border-2 rounded-xl text-center p-2 justify-center items-center flex flex-col bg-gradient-to-r from-blue-300 to-green-200 m-20">
+      </div> */}
+      {/* box */}
+      {/* <div className="w-96 h-auto shadow-2xl border-2 rounded-xl text-center p-2 justify-center items-center flex flex-col bg-gradient-to-r from-blue-300 to-green-200 m-20">
         <div className="flex h-28 w-28 rounded-full border-2 overflow-hidden justify-center items-center font-bold bg-white -mt-16">
           <h3 className="animate-pulse">Quarter I</h3>
         </div>
@@ -52,19 +53,19 @@ export default function Wmd() {
           CS- 101: Object - Oriented Programming using TypeScript
         </p>
         <p className="text-sm animate-pulse">Duration: 3 Months</p>
-      </div>
+      </div> */}
       {/* courses box */}
-      <div className="flex border-2 rounded-e-full rounded-s-full w-auto h-auto bg-gradient-to-r from-blue-300 to-green-200 overflow-hidden m-20">
-        <div className="flex h-28 w-28 rounded-full border-2 overflow-clip justify-center items-center font-extrabold bg-white">
-          <h3 className="animate-pulse">Quarter I</h3>
+      <div className="flex border-2 rounded-e-full rounded-s-full w-fit h-auto bg-gradient-to-r from-blue-300 to-green-200 overflow-hidden m-20 justify-stretch">
+        <div className="flex h-28 w-28 rounded-full border-2 overflow-clip justify-center items-center bg-white">
+          <h3 className="animate-pulse text-xl font-extrabold">Quarter I</h3>
         </div>
 
-        <div className="text-center bg-white">
-          <p className="text-md  text-slate-400 bg-slate-100 flex items-center ">
+        <div className="text-center flex flex-col items-center justify-center px-6 pt-5">
+          <p className="text-md  text-slate-400 font-bold">
             CS- 101: Object - Oriented Programming using TypeScript
           </p>
 
-          <p className="flex items-center text-sm text-slate-500 md:animate-pulse  bg-slate-400 ">
+          <p className="text-sm text-slate-500 md:animate-pulse   pt-6">
             Duration: 3 Months{" "}
           </p>
         </div>
