@@ -27,9 +27,9 @@ export default function Wmd() {
         </div>
       </div>
       <div className="text-center">
-        <h1 className="text-3xl font-extrabold mt-10 mb-2">
+        <h2 className="text-3xl font-extrabold mt-10 mb-2">
           Program of Studies
-        </h1>
+        </h2>
         <p className="text-justify px-16 text-slate-500 mb-10">
           This curriculum is intended for beginners who want to learn software
           development from the ground up. The first three quarters are shared by
@@ -44,25 +44,30 @@ export default function Wmd() {
           classes complemented by online Zoom laboratories and recorded videos.
         </p>
       </div>
-      <div className="w-96 h-44 shadow-2xl border-2 rounded-xl ml-20 text-center p-8">
-        <h1>Quarter I</h1>
-        <p>CS- 101: Object - Oriented Programming using TypeScript</p>
-        <p>Duration: 3 Months</p>
+      <div className="w-96 h-auto shadow-2xl border-2 rounded-xl text-center p-2 justify-center items-center flex flex-col bg-gradient-to-r from-blue-300 to-green-200 m-20">
+        <div className="flex h-28 w-28 rounded-full border-2 overflow-hidden justify-center items-center font-bold bg-white -mt-16">
+          <h3 className="animate-pulse">Quarter I</h3>
+        </div>
+        <p className="text-lg m-2 bottom-b-2 font-bold text-white">
+          CS- 101: Object - Oriented Programming using TypeScript
+        </p>
+        <p className="text-sm animate-pulse">Duration: 3 Months</p>
       </div>
       {/* courses box */}
-      <div className="flex border-2 rounded-3xl w-fit h-auto bg-gradient-to-r from-blue-300 to-green-200 ml-32">
-        {/* <div className="flex items-center w-full"> */}
-          <div className="flex h-36 w-36 rounded-full border-2 overflow-hidden justify-center items-center -ml-16">
-            Quarter I
-          </div>
-        {/* </div> */}
-        <div className="flex flex-col border-white uppercase text-white justify-center items-center border-b-2 m-6">
-          CS- 101: Object - Oriented Programming using TypeScript
-        <p className="text-sm text-slate-500 md:animate-pulse hover:scale-110 m-2">
-          Duration: 3 Months{" "}
-        </p>
+      <div className="flex border-2 rounded-e-full rounded-s-full w-auto h-auto bg-gradient-to-r from-blue-300 to-green-200 overflow-hidden m-20">
+        <div className="flex h-28 w-28 rounded-full border-2 overflow-clip justify-center items-center font-extrabold bg-white">
+          <h3 className="animate-pulse">Quarter I</h3>
         </div>
 
+        <div className="text-center bg-white">
+          <p className="text-md  text-slate-400 bg-slate-100 flex items-center ">
+            CS- 101: Object - Oriented Programming using TypeScript
+          </p>
+
+          <p className="flex items-center text-sm text-slate-500 md:animate-pulse  bg-slate-400 ">
+            Duration: 3 Months{" "}
+          </p>
+        </div>
       </div>
     </>
   );
