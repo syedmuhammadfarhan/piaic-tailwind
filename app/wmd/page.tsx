@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { CommonQuarters } from "../Data/Quarters-data";
 
 export default function Wmd() {
   return (
@@ -55,21 +56,23 @@ export default function Wmd() {
         <p className="text-sm animate-pulse">Duration: 3 Months</p>
       </div> */}
       {/* courses box */}
-      <div className="flex border-2 rounded-e-full rounded-s-full w-fit h-auto bg-gradient-to-r from-blue-300 to-green-200 overflow-hidden m-20 justify-stretch">
-        <div className="flex h-28 w-28 rounded-full border-2 overflow-clip justify-center items-center bg-white">
-          <h3 className="animate-pulse text-xl font-extrabold">Quarter I</h3>
-        </div>
 
-        <div className="text-center flex flex-col items-center justify-center px-6 pt-5">
-          <p className="text-md  text-slate-400 font-bold">
-            CS- 101: Object - Oriented Programming using TypeScript
-          </p>
-
-          <p className="text-sm text-slate-500 md:animate-pulse   pt-6">
-            Duration: 3 Months{" "}
-          </p>
+      {CommonQuarters.map((items, i) => (
+        <div
+          key={i}
+          className="md:flex border-2 rounded-e-full rounded-s-full max-w-auto w-[40%] h-36 bg-gradient-to-r from-blue-300 to-green-200 overflow-hidden justify-stretch items-center m-4"
+        >
+          <div className="bg-slate-200">
+            <div className="bg-white h-36 w-36 rounded-full items-center justify-center flex">
+              {items.heading}
+            </div>
+          </div>
+          <div className="p-6 ">
+            <div className="bg-slate-200">{items.description}</div>
+            <div className="bg-slate-300 pt-6">duration</div>
+          </div>
         </div>
-      </div>
+      ))}
     </>
   );
 }
