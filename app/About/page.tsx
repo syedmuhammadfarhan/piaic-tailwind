@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { SocialButton } from "../components/Footer";
 
 const aboutData = {
   name: "Dr. Arif Alvi",
@@ -27,19 +27,12 @@ export default function About() {
           <h1 className="text-2xl mt-4">{aboutData.name}</h1>
           <p className="text-sm text-slate-400 mb-4">{aboutData.designation}</p>
           <div className="flex justify-center">
-            <div className=" bg-white p-2 rounded-xl mr-3 hover:scale-110">
-              <Link
-                href={"https://www.facebook.com/Dr.ArifAlvi/"}
-                target="blank"
-              >
-                <FaFacebook size={13} />
-              </Link>
-            </div>
-            <div className=" bg-white p-2 rounded-xl mr-3 hover:scale-110">
-              <Link href={"https://twitter.com/ArifAlvi"} target="blank">
-                <FaTwitter size={13} />
-              </Link>
-            </div>
+            <SocialButton href={"https://www.facebook.com/Dr.ArifAlvi/"}>
+              <FaFacebook size={13} />
+            </SocialButton>
+            <SocialButton href={"https://twitter.com/ArifAlvi"}>
+              <FaTwitter size={13} />
+            </SocialButton>
           </div>
           <p className="text-sm text-justify px-8 md:px-32 pb-14 mt-10">
             {aboutData.message}

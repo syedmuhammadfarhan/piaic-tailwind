@@ -9,6 +9,7 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
+
 const navItems = [
   {
     navList: "Home",
