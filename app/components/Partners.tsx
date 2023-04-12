@@ -6,7 +6,7 @@ import { RevealWrapper } from "next-reveal";
 export default function Partners() {
   return (
     <center>
-      <h1 className="text-4xl font-bold m-6 border-b-4 border-green-300 max-w-fit">
+      <h1 className="text-3xl font-bold m-6 border-b-4 border-green-300 max-w-fit">
         Strategic Partners
       </h1>
 

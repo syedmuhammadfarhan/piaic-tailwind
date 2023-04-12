@@ -86,7 +86,7 @@ export default function Wmd() {
         <h2 className="text-xl md:text-2xl font-extrabold text-center mt-6">
           Common Quarters
         </h2>
-        <p className="text-sm text-slate-500 text-justify justify-center items-center flex px-4 pt-2">
+        <p className="text-sm text-slate-500 text-center px-4 pt-2">
           We will start the program by learning the fundamentals of
           Object-Oriented programming using JavaScript and TypeScript.
           <br />
@@ -101,7 +101,7 @@ export default function Wmd() {
                   {items.heading}
                 </div>
               </div>
-              <div className="flex h-36 border-white uppercase text-sm  text-white justify-center items-center border-b-2 mt-4 mx-4">
+              <div className="flex h-36 border-white text-sm  text-white justify-center items-center border-b-2 mt-4 mx-4">
                 {items.description}
               </div>
 
@@ -112,8 +112,12 @@ export default function Wmd() {
           ))}
         </div>
         <h2 className="text-xl md:text-xl font-extrabold text-center">
-          Specialization
+          Specialized Tracks
         </h2>
+        <p className="text-sm text-slate-500 text-center px-4 pt-2">
+          After completing the first three quarters the participants will select
+          one or more specializations consisting of two courses each.
+        </p>
         <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-3 mt-8 mb-16">
           {WmdQuarters.map((items, i) => (
             <div className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-300 to-green-200 mb-4">
@@ -122,7 +126,7 @@ export default function Wmd() {
                   {items.heading}
                 </div>
               </div>
-              <div className="flex h-36 border-white uppercase text-sm  text-white justify-center items-center border-b-2 mt-4 mx-4">
+              <div className="flex h-36 border-white text-sm  text-white justify-center items-center border-b-2 mt-4 mx-4">
                 {items.description}
               </div>
 

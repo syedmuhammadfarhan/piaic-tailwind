@@ -5,7 +5,7 @@ export default function Programs() {
   return (
     <div>
       <center>
-        <h1 className="text-4xl font-bold mt-14 mb-3 max-w-fit">
+        <h1 className="text-3xl font-bold mt-14 mb-3 max-w-fit">
           Getting Ready for the Next Generation of the Internet
         </h1>
 
@@ -18,7 +18,7 @@ export default function Programs() {
           cloud and edge computing, voice computing, ambient computing, and
           more.
         </p>
-        <h1 className="text-4xl font-bold mt-14 mb-3 max-w-fit">
+        <h1 className="text-3xl font-bold mt-14 mb-3 max-w-fit">
           Available Programs
         </h1>
 
