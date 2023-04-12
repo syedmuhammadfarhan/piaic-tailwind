@@ -6,6 +6,19 @@ export default function Programs() {
     <div>
       <center>
         <h1 className="text-4xl font-bold mt-14 mb-3 max-w-fit">
+          Getting Ready for the Next Generation of the Internet
+        </h1>
+
+        <p className="text-md text-slate-500 md:px-24 text-justify px-8">
+          The internet is without a doubt the most important technological
+          development in human history. Web3, 3D Metaverse, AI, IoT, Cloud, and
+          Edge technologies expand the internet as we know it by introducing
+          novel features and advancements. Metaverse will make use of all
+          aspects of modern technology, including 3D, VR, AR, AI, blockchain,
+          cloud and edge computing, voice computing, ambient computing, and
+          more.
+        </p>
+        <h1 className="text-4xl font-bold mt-14 mb-3 max-w-fit">
           Available Programs
         </h1>
 
@@ -22,8 +35,8 @@ export default function Programs() {
           weekdays. It employs a hybrid teaching format, with core onsite
           classes complemented by online Zoom laboratories and recorded videos.
         </p>
-        <div className="md:animate-bounce w-10 h-10 rounded-full border-2 border-black flex justify-center items-center mt-10"><AiOutlineArrowDown className="color-purple"/>
-          
+        <div className="md:animate-bounce w-10 h-10 rounded-full border-2 border-black flex justify-center items-center mt-10">
+          <AiOutlineArrowDown className="color-purple" />
         </div>
       </center>
     </div>
