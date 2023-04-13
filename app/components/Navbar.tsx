@@ -9,7 +9,6 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 
-
 const navItems = [
   {
     navList: "Home",
@@ -20,8 +19,12 @@ const navItems = [
     href: "./About",
   },
   {
-    navList: "Contact",
+    navList: "Available Programs",
     href: "./Contact",
+  },
+  {
+    navList: "How It Works",
+    href: "./HowItWorks",
   },
 ];
 
@@ -30,34 +33,41 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 bg-white flex w-full max-w-full justify-between items-center">
-      <div className="flex gap-10 mt-1">
-        <div className="hidden md:flex ml-5 md:-mb-11">
-          <Image src="/PIAICLogo.webp" alt="piaiclogo" width={60} height={60} />
+      <RevealWrapper>
+        <div className="flex gap-10 mt-1">
+          <div className="hidden md:flex ml-5 md:-mb-11">
+            <Image
+              src="/PIAICLogo.webp"
+              alt="piaiclogo"
+              width={60}
+              height={60}
+            />
+          </div>
+          <RevealWrapper
+            className="items-center flex"
+            // rotate={{ x: 12, y: 40, z: 0 }}
+            origin="right"
+            delay={200}
+            duration={1000}
+            distance="1000px"
+            reset={false}
+            // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
+          >
+            <ul className="hidden md:flex gap-10 items-center">
+              {navItems.map((items: { navList: string; href: string }, i) => {
+                return (
+                  <li
+                    key={i}
+                    className="hover:border-b-2 border-green-500 text-sm font-semibold"
+                  >
+                    <Link href={items.href}>{items.navList}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </RevealWrapper>
         </div>
-        <RevealWrapper
-          className="items-center flex"
-          // rotate={{ x: 12, y: 40, z: 0 }}
-          origin="right"
-          delay={200}
-          duration={1000}
-          distance="1000px"
-          reset={false}
-          // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
-        >
-          <ul className="hidden md:flex gap-10 items-center">
-            {navItems.map((items: { navList: string; href: string }, i) => {
-              return (
-                <li
-                  key={i}
-                  className="hover:border-b-2 border-green-500 text-sm font-semibold"
-                >
-                  <Link href={items.href}>{items.navList}</Link>
-                </li>
-              );
-            })}
-          </ul>
-        </RevealWrapper>
-      </div>
+      </RevealWrapper>
 
       <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-4 py-2 rounded-full text-white text-sm hover:bg-green-500">
         <Link
