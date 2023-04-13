@@ -25,9 +25,35 @@ export default function HowItWorks() {
             </p>
           </div>
         </div>
-        <center className="my-16">
-          <Image src="/pakmap.png" alt="" height="300" width="300" />
-        </center>
+        <div className=" max-w-[80%] flex justify-between">
+          <div className="my-16">
+            <Image src="/pakmap.png" alt="" height="300" width="300" />
+          </div>
+          <div className="pt-20 mb-10">
+            <center>City by City Roadmap</center>
+            <div className="flex gap-4 mt-6">
+              <div>1</div>
+              <div className="bg-white py-1 pl-1 pr-20 text-xs">Karachi</div>
+              <div>Accepting Applications</div>
+            </div>
+            <div className="flex gap-4">
+              <div>2</div>
+              <div>Islamabd</div>
+              <div>Accepting Applications</div>
+            </div>
+            <div className="flex gap-4">
+              <div>3</div>
+              <div>Lahore</div>
+              <div>Accepting Applications</div>
+            </div>
+            <div className="flex gap-4">
+              <div>4</div>
+              <div>Peshawar</div>
+              <div>Accepting Applications</div>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-slate-300">
           <div className="flex justify-left gap-10">
             <div className="flex justify-center items-center w-14 h-14 rounded-full  bg-green-400 text-white text-9xl  ">
