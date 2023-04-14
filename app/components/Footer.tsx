@@ -75,7 +75,7 @@ export const SocialButton = ({
 
 export default function Footer() {
   return (
-    <div className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-green-200 pl-3">
+    <div className="flex justify-between items-center bg-gradient-to-r from-green-200 to-white pl-3">
       <div className="flex justify-between">
         <SocialButton href={"https://www.facebook.com/groups/piaic/"}>
           <FaFacebook size={13} />

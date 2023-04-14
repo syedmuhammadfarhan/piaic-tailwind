@@ -12,7 +12,7 @@ const aboutData = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-200 to-green-100 border-slate-200 border-x-8">
+    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-green-300 border-slate-200 border-x-8">
       <center className="pt-10">
         <div className="w-36 h-36 rounded-full border-2 border-lime-600 overflow-hidden">
           <Image
@@ -25,7 +25,7 @@ export default function About() {
         </div>
         <div>
           <h1 className="text-2xl mt-4">{aboutData.name}</h1>
-          <p className="text-sm text-slate-400 mb-4">{aboutData.designation}</p>
+          <p className="text-sm text-white mb-4">{aboutData.designation}</p>
           <div className="flex justify-center">
             <SocialButton href={"https://www.facebook.com/Dr.ArifAlvi/"}>
               <FaFacebook size={13} />

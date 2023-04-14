@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     //  bg-[url('/bg1.jpeg')]
-    <div className="md:flex items-center h-auto bg-gradient-to-r from-blue-300 to-green-200">
+    <div className="md:flex items-center h-auto bg-gradient-to-r from-blue-400 to-green-300">
       <div className="md:basis-2/4 px-14 pt-10 items-center">
         <Image src="/president.png" alt="arif alvi" width={300} height={300} />
       </div>
@@ -17,7 +17,7 @@ export default function Hero() {
           for Artificial Intelligence & Computing
         </h2>
 
-        <div className="md:pr-4 lg:pr-52 leading-7 text-justify text-md text-slate-500">
+        <div className="md:pr-4 lg:pr-52 leading-7 text-justify text-md text-white">
           <p>
             The mission of PIAIC is to reshape Pakistan by revolutionizing
             education, research, and business by adopting latest, cutting-edge

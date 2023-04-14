@@ -19,20 +19,44 @@ const navItems = [
     href: "./About",
   },
   {
-    navList: "Available Programs",
-    href: "./Contact",
-  },
-  {
     navList: "How It Works",
     href: "./HowItWorks",
   },
 ];
 
+const programsArray = [
+  {
+    programList: "Web 3.0 & Metaverse",
+    href: "./wmd",
+  },
+  {
+    programList: "Artificial Intelligence & Deep Learning",
+    href: "./wmd",
+  },
+  {
+    programList: "Cloud-Native Computing",
+    href: "./wmd",
+  },
+  {
+    programList: "Ambient Computing & IoT",
+    href: "./wmd",
+  },
+  {
+    programList: "Genomics & Bioinformatics",
+    href: "./wmd",
+  },
+  {
+    programList: "Network Programmability & Automation",
+    href: "./wmd",
+  },
+];
+
 export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
+  const [proMenu, setProMenu] = useState(false);
 
   return (
-    <div className="sticky top-0 bg-white flex w-full max-w-full justify-between items-center">
+    <div className="flex w-full max-w-full justify-between items-center bg-gradient-to-r from-green-200 to-white">
       <RevealWrapper>
         <div className="flex gap-10 mt-1">
           <div className="hidden md:flex ml-5 md:-mb-11">
@@ -58,16 +82,43 @@ export default function Navbar() {
                 return (
                   <li
                     key={i}
-                    className="hover:border-b-2 border-green-500 text-sm font-semibold"
+                    className="hover:border-b-2 border-green-600 text-sm font-semibold"
                   >
                     <Link href={items.href}>{items.navList}</Link>
                   </li>
                 );
               })}
+              <li className="hover:border-b-2 border-green-600 text-sm font-semibold">
+                <div onClick={() => setProMenu(!proMenu)}>
+                  Available Programs
+                </div>
+              </li>
             </ul>
           </RevealWrapper>
         </div>
       </RevealWrapper>
+
+      {/* Available Programs Menu */}
+
+      {proMenu && (
+        <div className="fixed w-screen h-screen top-12"
+          onClick={() => setProMenu(!proMenu)}>
+          <div
+            className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-auto top-12 fixed left-96 px-3 py-2"
+            onClick={() => setProMenu(!proMenu)}
+          >
+            {programsArray.map((items) => {
+              return (
+                <div className="flex p-2 text-sm">
+                  <Link href={items.href}>{items.programList}</Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Available Programs Menu End */}
 
       <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-4 py-2 rounded-full text-white text-sm hover:bg-green-500">
         <Link
