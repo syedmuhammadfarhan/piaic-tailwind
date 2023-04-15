@@ -32,7 +32,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="max-w-[80%] flex flex-col md:justify-between">
+        <div className="max-w-[80%] flex flex-col md:flex-row md:justify-between">
           <div className="flex justify-center items-center my-8">
             <Image src="/pakmap.png" alt="" height="300" width="300" />
           </div>

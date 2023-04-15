@@ -101,17 +101,21 @@ export default function Navbar() {
       {/* Available Programs Menu */}
 
       {proMenu && (
-        <div className="fixed w-screen h-screen top-12"
-          onClick={() => setProMenu(!proMenu)}>
+        <div
+          className="fixed w-screen h-screen top-12"
+          onClick={() => setProMenu(!proMenu)}
+        >
           <div
-            className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-auto top-12 fixed left-96 px-3 py-2"
+            className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-auto top-14 fixed left-96 px-3 py-2"
             onClick={() => setProMenu(!proMenu)}
           >
             {programsArray.map((items) => {
               return (
-                <div className="flex p-2 text-sm">
-                  <Link href={items.href}>{items.programList}</Link>
-                </div>
+                <Link href={items.href}>
+                  <div className="flex p-2 text-sm hover:bg-sky-500">
+                    {items.programList}
+                  </div>
+                </Link>
               );
             })}
           </div>
