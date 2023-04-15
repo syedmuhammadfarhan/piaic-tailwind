@@ -142,11 +142,8 @@ export default function Navbar() {
       {/* onClick Hamburger menu */}
 
       {mobNav && (
-        <div
-          className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
-          onClick={() => setMobNav(!mobNav)}
-        >
-          <div className="fixed right-0 top-0 w-[75%] sm:w-[60%] md:[45%] h-screen bg-gradient-to-r from-blue-200 to-green-100 p-4 ease-in duration-500">
+        <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
+          <div className="fixed right-0 top-0 w-[100%] sm:w-[60%] md:[45%] h-screen bg-gradient-to-r from-blue-400 to-green-300 p-4 ease-in duration-500">
             <div className="flex justify-between">
               <Image
                 src="/PIAICLogo.webp"
@@ -159,15 +156,38 @@ export default function Navbar() {
                 className="cursor-pointer"
               />
             </div>
-            <div className="text-center leading-10 py-10">
+            <div className="leading-10 pt-10 text-sm font-bold">
               <ul>
                 {navItems.map((items: { navList: string; href: string }, i) => (
                   <li onClick={() => setMobNav(!mobNav)} key={i}>
                     <Link href={items.href}>{items.navList}</Link>
                   </li>
                 ))}
+                <li className="text-sm leading-10">
+                  <div
+                    onClick={() => {
+                      setProMenu(!proMenu);
+                    }}
+                  >
+                    Available Programs
+                  </div>
+                </li>
               </ul>
             </div>
+            {proMenu && (
+              <ul>
+                {programsArray.map((items) => (
+                  <div
+                    className="pl-2 border-b-2 border-slate-300 text-xs flex justify-start items-center leading-6"
+                    onClick={() => setMobNav(!mobNav)}
+                  >
+                    <li className="">
+                      <Link href={items.href}>{items.programList}</Link>
+                    </li>
+                  </div>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       )}
