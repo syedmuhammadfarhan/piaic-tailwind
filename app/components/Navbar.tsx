@@ -88,7 +88,7 @@ export default function Navbar() {
                   </li>
                 );
               })}
-              <li className="hover:border-b-2 border-green-600 text-sm font-semibold">
+              <li className="hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer">
                 <div onClick={() => setProMenu(!proMenu)}>
                   Available Programs
                 </div>

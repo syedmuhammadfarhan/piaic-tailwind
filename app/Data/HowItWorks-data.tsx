@@ -40,6 +40,8 @@ export const mainList = [
   },
   {
     listnumber: 7,
-    text: "For questions related to admissions, you may call us on the PIAIC Helpline: +92-308-2220203 between 10 AM - 6 PM.\nPlease note we are closed on Fridays.\nFor technical questions related to coursework, you may contact us via email at education@piaic.org."
+    text: `For questions related to admissions, you may call us on the PIAIC Helpline: +92-308-2220203 between 10 AM - 6 PM.
+    Please note we are closed on Fridays.
+    For technical questions related to coursework, you may contact us via email at education@piaic.org`,
   },
 ];

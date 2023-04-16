@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { CommonQuarters, WmdQuarters } from "../Data/Quarters-data";
+import Link from "next/link";
 
 export default function Wmd() {
   return (
@@ -84,7 +85,17 @@ export default function Wmd() {
           ))}
         </div>
       </center>
-      <div>To Download Detailed Syllabus in PDF Click Here</div>
+      <div className="text-sm text-slate-500 m-4 flex justify-center items-center gap-2">
+        To View Detailed Syllabus{" "}
+        <div className="text-blue-500 shadow-inner shadow-slate-400 max-w-fit px-2 py-1 rounded-2xl p-1 hover:scale-105 text-sm">
+          <Link
+            href="https://docs.google.com/document/d/13Z4tMKQmZpMEsOc1Y_qAXbOstRolGIFupHxQFgAFl98/edit"
+            target="_blank"
+          >
+            Click Here
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
