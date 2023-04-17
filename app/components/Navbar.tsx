@@ -54,9 +54,20 @@ const programsArray = [
 export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
   const [proMenu, setProMenu] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
+  // Handler for mouse enter event
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  // Handler for mouse leave event
+  const handleMouseLeave = () => {
+    setProMenu(false);
+  };
 
   return (
-    <div className="flex w-full max-w-full justify-between items-center bg-gradient-to-r from-green-200 to-white">
+    <div className="flex w-full max-w-full justify-between items-center bg-gradient-to-r from-green-200 to-white relative z-auto">
       <RevealWrapper>
         <div className="flex gap-10 mt-1">
           <div className="hidden md:flex ml-5 md:-mb-11">
@@ -73,34 +84,54 @@ export default function Navbar() {
             origin="right"
             delay={200}
             duration={1000}
-            distance="1000px"
+            distance="4000px"
             reset={false}
             // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
           >
-            <ul className="hidden md:flex gap-10 items-center">
+            <div className="hidden md:flex gap-10 items-center  ">
               {navItems.map((items: { navList: string; href: string }, i) => {
                 return (
-                  <li
+                  <div
                     key={i}
-                    className="hover:border-b-2 border-green-600 text-sm font-semibold"
+                    className="hover:border-b-2 border-green-600 text-sm font-semibold relative z-20"
+                    onClick={() => setProMenu(false)}
                   >
                     <Link href={items.href}>{items.navList}</Link>
-                  </li>
+                  </div>
                 );
               })}
-              <li className="hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer">
-                <div onClick={() => setProMenu(!proMenu)}>
+              <div
+                onClick={() => setProMenu(!proMenu)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <div
+                  className="group z-30 hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer"
+                 
+                >
                   Available Programs
+                  {proMenu && (
+                    <div className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed left-[69] py-2">
+                      {programsArray.map((items) => {
+                        return (
+                          <Link href={items.href}>
+                            <div className="flex p-2 text-sm hover:bg-sky-500">
+                              {items.programList}
+                            </div>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </RevealWrapper>
         </div>
       </RevealWrapper>
 
       {/* Available Programs Menu */}
 
-      {proMenu && (
+      {/* {proMenu && (
         <div
           className="fixed w-screen h-screen top-12"
           onClick={() => setProMenu(!proMenu)}
@@ -120,7 +151,7 @@ export default function Navbar() {
             })}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Available Programs Menu End */}
 
