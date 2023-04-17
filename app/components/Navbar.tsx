@@ -100,17 +100,14 @@ export default function Navbar() {
                   </div>
                 );
               })}
-              <div
-                onClick={() => setProMenu(!proMenu)}
-                onMouseLeave={handleMouseLeave}
-              >
-                <div
-                  className="group z-30 hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer"
-                 
-                >
+              <div onClick={() => setProMenu(!proMenu)}>
+                <div className="group z-30 hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer">
                   Available Programs
                   {proMenu && (
-                    <div className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed left-[69] py-2">
+                    <div
+                      className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.7rem] left-[69] py-2"
+                      onMouseLeave={() => setProMenu(false)}
+                    >
                       {programsArray.map((items) => {
                         return (
                           <Link href={items.href}>
