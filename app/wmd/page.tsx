@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Wmd() {
   return (
     <>
-      <div className="md:flex justify-between h-1/3 bg-gradient-to-r from-blue-400 to-green-300 px-8">
+      <div className="md:flex justify-between h-1/3 bg-gradient-to-r from-blue-400 to-green-300 px-8 pb-6">
         <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
           <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
             Web 3.0 (Blockchain) and Metaverse Specialization
@@ -85,9 +85,9 @@ export default function Wmd() {
           ))}
         </div>
       </center>
-      <div className="text-sm text-slate-500 m-4 flex justify-center items-center gap-2">
+      <div className="text-xs md:text-sm text-slate-500 m-4 flex justify-center items-center gap-1">
         To View Detailed Syllabus{" "}
-        <div className="text-blue-500 shadow-inner shadow-slate-400 max-w-fit px-2 py-1 rounded-2xl p-1 hover:scale-105 text-sm">
+        <div className="text-blue-500 shadow-inner shadow-slate-400 max-w-fit px-2 py-1 rounded-2xl p-1 hover:scale-105 text-xs md:text-md">
           <Link
             href="https://docs.google.com/document/d/13Z4tMKQmZpMEsOc1Y_qAXbOstRolGIFupHxQFgAFl98/edit"
             target="_blank"

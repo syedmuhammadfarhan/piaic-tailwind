@@ -54,20 +54,9 @@ const programsArray = [
 export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
   const [proMenu, setProMenu] = useState(false);
-  const [isHovering, setIsHovering] = useState(false);
-
-  // Handler for mouse enter event
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
-
-  // Handler for mouse leave event
-  const handleMouseLeave = () => {
-    setProMenu(false);
-  };
 
   return (
-    <div className="flex w-full max-w-full justify-between items-center bg-gradient-to-r from-green-200 to-white relative z-auto">
+    <div className="flex w-full max-w-full justify-between items-center bg-gradient-to-r from-green-200 to-white">
       <RevealWrapper>
         <div className="flex gap-10 mt-1">
           <div className="hidden md:flex ml-5 md:-mb-11">
@@ -88,39 +77,40 @@ export default function Navbar() {
             reset={false}
             // viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
           >
-            <div className="hidden md:flex gap-10 items-center  ">
+            <div className="hidden md:flex gap-10 items-center">
               {navItems.map((items: { navList: string; href: string }, i) => {
                 return (
                   <div
                     key={i}
-                    className="hover:border-b-2 border-green-600 text-sm font-semibold relative z-20"
+                    className="hover:border-b-2 border-green-600 text-sm font-semibold"
                     onClick={() => setProMenu(false)}
                   >
                     <Link href={items.href}>{items.navList}</Link>
                   </div>
                 );
               })}
-              <div onClick={() => setProMenu(!proMenu)}>
-                <div className="group z-30 hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer">
-                  Available Programs
-                  {proMenu && (
-                    <div
-                      className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.7rem] left-[69] py-2"
-                      onMouseLeave={() => setProMenu(false)}
-                    >
-                      {programsArray.map((items) => {
-                        return (
-                          <Link href={items.href}>
-                            <div className="flex p-2 text-sm hover:bg-sky-500">
-                              {items.programList}
-                            </div>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
+
+              <div
+                className="hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer "
+                onMouseEnter={() => setProMenu(true)}
+              >
+                Available Programs
+                {proMenu && (
+                  <div
+                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.7rem] left-[69] py-2 "
+                    onMouseLeave={() => setProMenu(false)}
+                  >
+                    {programsArray.map((items) => {
+                      return (
+                        <div className="flex p-2 text-sm hover:bg-sky-500 font-light">
+                          <Link href={items.href}>{items.programList}</Link>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
+              
             </div>
           </RevealWrapper>
         </div>
@@ -180,7 +170,10 @@ export default function Navbar() {
                 height={40}
               />
               <AiOutlineClose
-                onClick={() => setMobNav(!mobNav)}
+                onClick={() => {
+                  setProMenu(false);
+                  setMobNav(!mobNav);
+                }}
                 className="cursor-pointer"
               />
             </div>
@@ -209,7 +202,11 @@ export default function Navbar() {
                     className="pl-2 border-b-2 border-slate-300 text-xs flex justify-start items-center leading-6"
                     onClick={() => setMobNav(!mobNav)}
                   >
-                    <li className="">
+                    <li
+                      onClick={() => {
+                        setProMenu(!proMenu);
+                      }}
+                    >
                       <Link href={items.href}>{items.programList}</Link>
                     </li>
                   </div>
