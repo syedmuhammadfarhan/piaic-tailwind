@@ -31,23 +31,23 @@ const programsArray = [
   },
   {
     programList: "Artificial Intelligence & Deep Learning",
-    href: "./wmd",
+    href: "./ai",
   },
   {
     programList: "Cloud-Native Computing",
-    href: "./wmd",
+    href: "./cnc",
   },
   {
     programList: "Ambient Computing & IoT",
-    href: "./wmd",
+    href: "./iot",
   },
   {
     programList: "Genomics & Bioinformatics",
-    href: "./wmd",
+    href: "./bio",
   },
   {
     programList: "Network Programmability & Automation",
-    href: "./wmd",
+    href: "./npa",
   },
 ];
 
@@ -92,17 +92,20 @@ export default function Navbar() {
 
               <div
                 className="hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer "
-                onMouseEnter={() => setProMenu(true)}
+                onClick={() => setProMenu(!proMenu)}
               >
                 Available Programs
                 {proMenu && (
                   <div
-                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.7rem] left-[69] py-2 "
+                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.6rem] left-[69] py-2 "
                     onMouseLeave={() => setProMenu(false)}
                   >
-                    {programsArray.map((items) => {
+                    {programsArray.map((items, i) => {
                       return (
-                        <div className="flex p-2 text-sm hover:bg-sky-500 font-light">
+                        <div
+                          key={i}
+                          className="flex p-2 text-sm hover:bg-sky-500 font-light"
+                        >
                           <Link href={items.href}>{items.programList}</Link>
                         </div>
                       );
@@ -110,7 +113,6 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              
             </div>
           </RevealWrapper>
         </div>
@@ -142,7 +144,7 @@ export default function Navbar() {
 
       {/* Available Programs Menu End */}
 
-      <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-4 py-2 rounded-full text-white text-sm hover:bg-green-500">
+      <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-3 py-[0.4rem] rounded-full text-white text-sm hover:bg-green-500">
         <Link
           className="flex items-center gap-1"
           href="https://portal.piaic.org/"
@@ -197,8 +199,9 @@ export default function Navbar() {
             </div>
             {proMenu && (
               <ul>
-                {programsArray.map((items) => (
+                {programsArray.map((items, i) => (
                   <div
+                    key={i}
                     className="pl-2 border-b-2 border-slate-300 text-xs flex justify-start items-center leading-6"
                     onClick={() => setMobNav(!mobNav)}
                   >

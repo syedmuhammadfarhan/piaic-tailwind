@@ -2,14 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Courses } from "../Data/Courses-data";
+import { CoursesArray } from "../Data/Courses-data";
 import { RevealWrapper } from "next-reveal";
 
-export default function Courses1() {
+export default function Courses() {
   return (
     <center>
       <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-3 mt-8 mb-16">
-        {Courses.map(
+        {CoursesArray.map(
           (items: { image: string; courseName: string; href: string }, i) => {
             return (
               <center key={i}>

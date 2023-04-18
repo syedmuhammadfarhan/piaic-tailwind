@@ -43,7 +43,10 @@ export default function Wmd() {
         </p>
         <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-3 mt-8 mb-16">
           {CommonQuarters.map((items, i) => (
-            <div className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4">
+            <div
+              key={i}
+              className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4"
+            >
               <div className="flex items-center justify-center w-full">
                 <div className="flex h-40 w-40 rounded-full border-2 overflow-hidden mt-3 justify-center items-center text-lg font-bold bg-white">
                   {items.heading}
@@ -68,7 +71,10 @@ export default function Wmd() {
         </p>
         <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-3 mt-8 mb-16">
           {WmdQuarters.map((items, i) => (
-            <div className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4">
+            <div
+              key={i}
+              className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4"
+            >
               <div className="flex items-center justify-center w-full">
                 <div className="flex h-40 w-40 rounded-full border-2 overflow-hidden mt-3 justify-center items-center text-lg font-bold bg-white">
                   {items.heading}

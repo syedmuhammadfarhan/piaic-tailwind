@@ -1,32 +1,32 @@
-export const Courses = [
+export const CoursesArray = [
   {
     image: "/web3.jpeg",
     courseName: "Web 3.0 & Metaverse Specialization",
-    href: "./wmd",
+    href: "/wmd",
   },
   {
     image: "/ai.jpeg",
     courseName: "Artificial Intelligence & Deep Learning Specialization",
-    href: "./ai",
+    href: "/ai",
   },
   {
     image: "/cnc.jpeg",
     courseName: "Cloud-Native Computing Specialization",
-    href: "./cnc",
+    href: "/cnc",
   },
   {
     image: "/iot.jpeg",
     courseName: "Ambient Computing & IoT Specialization",
-    href: "./iot",
+    href: "/iot",
   },
   {
     image: "/geno.jpeg",
     courseName: "Genomics and Bioinformatics Specialization",
-    href: "./bio",
+    href: "/bio",
   },
   {
     image: "/npa.jpeg",
     courseName: "Network Programmability and Automation Specialization",
-    href: "./npa",
+    href: "/npa",
   },
 ];
