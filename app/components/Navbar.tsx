@@ -118,32 +118,6 @@ export default function Navbar() {
         </div>
       </RevealWrapper>
 
-      {/* Available Programs Menu */}
-
-      {/* {proMenu && (
-        <div
-          className="fixed w-screen h-screen top-12"
-          onClick={() => setProMenu(!proMenu)}
-        >
-          <div
-            className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-auto top-14 fixed left-96 px-3 py-2"
-            onClick={() => setProMenu(!proMenu)}
-          >
-            {programsArray.map((items) => {
-              return (
-                <Link href={items.href}>
-                  <div className="flex p-2 text-sm hover:bg-sky-500">
-                    {items.programList}
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      )} */}
-
-      {/* Available Programs Menu End */}
-
       <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-3 py-[0.4rem] rounded-full text-white text-sm hover:bg-green-500">
         <Link
           className="flex items-center gap-1"
@@ -154,12 +128,12 @@ export default function Navbar() {
         </Link>
       </button>
 
-      {/* Hamburger */}
+      {/* Hamburger icon*/}
       <div onClick={() => setMobNav(!mobNav)} className="md:hidden">
         <AiOutlineMenu size="25" className="cursor-pointer mr-1.5 m-1.5" />
       </div>
 
-      {/* onClick Hamburger menu */}
+      {/* onClick Hamburger menu items*/}
 
       {mobNav && (
         <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
