@@ -5,13 +5,13 @@ import { RevealWrapper } from "next-reveal";
 
 export default function Partners() {
   return (
-    <center>
-      <h1 className="text-3xl font-bold m-6 border-b-4 border-green-300 max-w-fit">
+    <center className="bg-blue-300">
+      <h1 className="text-xl md:text-2xl font-extrabold pt-14 mb-6 max-w-fit px-8">
         Strategic Partners
       </h1>
 
       <RevealWrapper mobile={false} reset={true}>
-        <div className="md:flex justify-center mb-10">
+        <div className="md:flex justify-center pb-10">
           <Image
             className="m-6"
             src="/saylaniLogo.png"

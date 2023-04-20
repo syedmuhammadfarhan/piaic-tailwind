@@ -25,8 +25,9 @@ export default function Courses() {
                 >
                   <div className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4">
                     <div className="flex items-center justify-center w-full">
-                      <div className="flex h-40 w-40 rounded-full border-2 overflow-hidden mt-3 object-cover">
+                      <div className="flex justify-center items-center h-40 w-40 rounded-full border-2 overflow-hidden mt-3">
                         <Image
+                          className="object-cover h-40"
                           src={items.image}
                           alt={items.image}
                           width={200}
