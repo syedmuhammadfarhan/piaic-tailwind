@@ -251,11 +251,11 @@ export default function AvailableProgramsD({
             ))}
         </div>
       </center>
-      <center className="md:flex justify-center items-center">
-        <div className="text-xs md:text-sm text-slate-500 pb-2">
+      <center className="md:flex justify-center items-center gap-2 mb-20">
+        <div className="text-xs md:text-sm text-slate-500 pb-4 md:pb-0">
           To View Detailed Syllabus{" "}
         </div>
-        <div className="text-blue-500 shadow-inner shadow-slate-400 max-w-fit px-2 py-1 rounded-2xl p-1 hover:scale-105 text-xs md:text-md mb-16">
+        <div className="text-blue-500 shadow-inner max-w-fit shadow-slate-400 px-2 py-1 rounded-2xl md:hover:scale-105 text-xs md:text-md">
           <Link
             href="https://docs.google.com/document/d/13Z4tMKQmZpMEsOc1Y_qAXbOstRolGIFupHxQFgAFl98/edit"
             target="_blank"
