@@ -8,48 +8,7 @@ import {
   AiOutlineDoubleRight,
   AiOutlineMenu,
 } from "react-icons/ai";
-
-const navItems = [
-  {
-    navList: "Home",
-    href: "./",
-  },
-  {
-    navList: "About",
-    href: "./About",
-  },
-  {
-    navList: "How It Works",
-    href: "./HowItWorks",
-  },
-];
-
-const programsArray = [
-  {
-    programList: "Web 3.0 & Metaverse",
-    href: "./wmd",
-  },
-  {
-    programList: "Artificial Intelligence & Deep Learning",
-    href: "./ai",
-  },
-  {
-    programList: "Cloud-Native Computing",
-    href: "./cnc",
-  },
-  {
-    programList: "Ambient Computing & IoT",
-    href: "./iot",
-  },
-  {
-    programList: "Genomics & Bioinformatics",
-    href: "./bio",
-  },
-  {
-    programList: "Network Programmability & Automation",
-    href: "./npa",
-  },
-];
+import { navItems, programsArray } from "../Data/NavBar-data";
 
 export default function Navbar() {
   const [mobNav, setMobNav] = useState(false);
@@ -156,7 +115,13 @@ export default function Navbar() {
             <div className="leading-10 pt-10 text-sm font-bold">
               <ul>
                 {navItems.map((items: { navList: string; href: string }, i) => (
-                  <li onClick={() => setMobNav(!mobNav)} key={i}>
+                  <li
+                    onClick={() => {
+                      setMobNav(!mobNav);
+                      setProMenu(false);
+                    }}
+                    key={i}
+                  >
                     <Link href={items.href}>{items.navList}</Link>
                   </li>
                 ))}
@@ -176,7 +141,7 @@ export default function Navbar() {
                 {programsArray.map((items, i) => (
                   <div
                     key={i}
-                    className="pl-2 border-b-2 border-slate-300 text-xs flex justify-start items-center leading-6"
+                    className="border-b-2 border-slate-300 text-xs flex justify-start items-center leading-6"
                     onClick={() => setMobNav(!mobNav)}
                   >
                     <li

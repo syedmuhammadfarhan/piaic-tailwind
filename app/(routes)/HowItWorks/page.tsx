@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { AiOutlineArrowDown, AiOutlineArrowRight } from "react-icons/ai";
 import Link from "next/link";
-import { cityList, mainList } from "../Data/HowItWorks-data";
+import { cityList, mainList } from "../../Data/HowItWorks-data";
 
 export default function HowItWorks() {
   return (
     <div className="flex justify-center items-center bg-gradient-to-r from-blue-500 to-green-600">
-      <div className=" max-w-[80%]">
+      <div className="max-w-[80%]">
         <center>
           <h1 className="text-3xl font-bold mt-14 mb-20 max-w-fit border-b-2 border-green-400">
             How It Works
@@ -15,16 +15,14 @@ export default function HowItWorks() {
         </center>
 
         <div className="flex flex-col md:flex-row md:justify-left items-center gap-10 my-16">
-          <div className="flex justify-center items-center text-white text-9xl">
-            1
-          </div>
+          <div className="text-white text-9xl pr-[0.5rem]">1</div>
           <div className="hidden md:flex">
             <AiOutlineArrowRight size="20" color="white" />
           </div>
-          <div className="flex md:hidden">
+          <div className="flex md:hidden pl-[0.3rem]">
             <AiOutlineArrowDown size="20" color="white" />
           </div>
-          <div className="flex flex-col justify-center items-center md:flex-row md:justify-start text-justify">
+          <div className="flex flex-col justify-center items-center md:flex-row md:justify-start text-justify text-sm md:text-md">
             <p>
               PIAIC will launch classes in the following locations, one city at
               a time, in the following order
@@ -69,7 +67,7 @@ export default function HowItWorks() {
               <AiOutlineArrowDown size="20" color="white" />
             </div>
             <div className="flex flex-col justify-center items-center md:justify-star">
-              <div className="pb-10 border-slate-400 border-b-2 text-justify">
+              <div className="pb-10 border-slate-400 border-b-2 text-justify text-sm md:text-md">
                 <p>
                   To participate in the program and become eligible for the most
                   prestigious credentials for AI, Cloud and Blockchain
@@ -78,7 +76,7 @@ export default function HowItWorks() {
                 </p>
               </div>
 
-              <div className="flex justify-left items-center text-justify pt-10">
+              <div className="flex justify-left items-center text-justify pt-10 text-sm md:text-md">
                 <ul>
                   <li>
                     1- Signup at PIAIC Portal.{" "}
@@ -122,7 +120,7 @@ export default function HowItWorks() {
                 <AiOutlineArrowDown size="20" color="white" />
               </div>
               <div className="flex flex-col justify-center items-center md:flex-row md:justify-start">
-                <p className="text-justify flex justify-center items-center">
+                <p className="text-justify flex justify-center items-center text-sm md:text-md">
                   {items.text}
                 </p>
               </div>

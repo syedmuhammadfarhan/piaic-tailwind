@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
-import { SocialButton } from "../components/Footer";
+import { SocialButton } from "../../components/Footer";
 
 const aboutData = {
   name: "Dr. Arif Alvi",
@@ -12,8 +12,8 @@ const aboutData = {
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-green-300 border-slate-200 border-x-8">
-      <center className="pt-10">
+    <div className="min-h-screen bg-gradient-to-r from-blue-400 to-green-300 border-slate-200">
+      <center className="pt-10 pb-52">
         <div className="w-36 h-36 rounded-full border-2 border-lime-600 overflow-hidden">
           <Image
             className="object-cover h-36"
@@ -34,7 +34,7 @@ export default function About() {
               <FaTwitter size={13} />
             </SocialButton>
           </div>
-          <p className="text-sm text-justify px-8 md:px-32 pb-14 mt-10">
+          <p className="text-sm text-justify px-8 md:px-32 mt-10 leading-6">
             {aboutData.message}
           </p>
         </div>

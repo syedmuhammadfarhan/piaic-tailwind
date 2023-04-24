@@ -19,7 +19,7 @@ export default function AvailableProgramsD({
 }) {
   return (
     <div>
-      <div className="md:flex justify-between h-1/3 bg-gradient-to-r from-blue-400 to-green-300 px-8 pb-6">
+      <div className="md:flex md:justify-between md:h-96 bg-gradient-to-r from-blue-400 to-green-300 px-8 pb-6">
         {params.name === "wmd" && (
           <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
             <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
@@ -93,10 +93,9 @@ export default function AvailableProgramsD({
         <h2 className="text-xl md:text-2xl font-extrabold text-center mt-6">
           Common Quarters
         </h2>
-        <p className="text-sm text-slate-500 text-center px-4 pt-2">
+        <p className="text-sm text-slate-500 text-center px-4 pt-2 leading-6">
           We will start the program by learning the fundamentals of
           Object-Oriented programming using JavaScript and TypeScript.
-          <br />
           <br />
           After completing the first three quarters the participants will select
           one or more specializations consisting of two courses each.
@@ -234,7 +233,7 @@ export default function AvailableProgramsD({
             npaQuarters.map((items, i) => (
               <div
                 key={i}
-                className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4"
+                className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300"
               >
                 <div className="flex items-center justify-center w-full">
                   <div className="flex h-40 w-40 rounded-full border-2 overflow-hidden mt-3 justify-center items-center text-lg font-bold bg-white">
@@ -252,7 +251,7 @@ export default function AvailableProgramsD({
             ))}
         </div>
       </center>
-      <div className="text-xs md:text-sm text-slate-500 m-4 flex justify-center items-center gap-1">
+      <div className="text-xs md:text-sm text-slate-500 pb-16 flex justify-center items-center gap-1">
         To View Detailed Syllabus{" "}
         <div className="text-blue-500 shadow-inner shadow-slate-400 max-w-fit px-2 py-1 rounded-2xl p-1 hover:scale-105 text-xs md:text-md">
           <Link

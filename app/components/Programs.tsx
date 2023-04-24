@@ -1,15 +1,19 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { AiOutlineArrowDown } from "react-icons/ai";
+
+export const Heading = ({ children }: { children: ReactNode }) => {
+  <h1 className="text-xl md:text-2xl font-extrabold mt-14 mb-3 max-w-fit px-8">{children}</h1>;
+};
 
 export default function Programs() {
   return (
     <div>
       <center>
-        <h1 className="text-xl md:text-2xl font-extrabold mt-14 mb-3 max-w-fit px-8">
+        <h2 className="text-xl md:text-2xl font-extrabold mt-14 mb-3 max-w-fit px-8">
           Getting Ready for the Next Generation of the Internet
-        </h1>
+        </h2>
 
-        <p className="text-sm md:text-md text-slate-500 md:px-24 text-justify px-8">
+        <p className="text-sm md:text-md text-slate-500 md:px-24 text-justify px-4">
           The internet is without a doubt the most important technological
           development in human history. Web3, 3D Metaverse, AI, IoT, Cloud, and
           Edge technologies expand the internet as we know it by introducing
@@ -18,11 +22,11 @@ export default function Programs() {
           cloud and edge computing, voice computing, ambient computing, and
           more.
         </p>
-        <h1 className="text-xl md:text-2xl font-extrabold mt-14 mb-3 max-w-fit px-8">
+        <h2 className="text-xl md:text-2xl font-extrabold mt-14 mb-3 max-w-fit px-8">
           Available Programs
-        </h1>
+        </h2>
 
-        <p className="text-sm md:text-md text-slate-500 md:px-24 text-justify px-8">
+        <p className="text-sm md:text-md text-slate-500 md:px-24 text-justify px-4">
           This curriculum is intended for beginners who want to learn software
           development from the ground up. The first three quarters are shared by
           all specialties and are dedicated to studying Object-Oriented

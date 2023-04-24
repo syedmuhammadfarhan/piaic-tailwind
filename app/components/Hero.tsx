@@ -17,7 +17,7 @@ export default function Hero() {
           for Artificial Intelligence & Computing
         </h2>
 
-        <div className="md:pr-4 lg:pr-52 leading-6 text-justify text-sm text-slate-600">
+        <div className="md:pr-4 lg:pr-52 leading-6 text-justify text-sm text-black">
           <p>
             The mission of PIAIC is to reshape Pakistan by revolutionizing
             education, research, and business by adopting latest, cutting-edge

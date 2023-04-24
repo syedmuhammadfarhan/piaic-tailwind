@@ -5,12 +5,12 @@ import { RevealWrapper } from "next-reveal";
 
 export default function Partners() {
   return (
-    <center className="bg-blue-300">
-      <h1 className="text-xl md:text-2xl font-extrabold pt-20 mb-6 max-w-fit px-8">
+    <center>
+      <h1 className="text-xl md:text-2xl font-extrabold pt-20 mb-10 max-w-fit px-8">
         Strategic Partners
       </h1>
 
-      <RevealWrapper mobile={false} reset={true}>
+      <RevealWrapper mobile={false} reset={false}>
         <div className="md:flex justify-center pb-10">
           <Image
             className="mb-8"
