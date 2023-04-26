@@ -81,7 +81,7 @@ export default function AvailableProgramsD({
           </div>
         )}
 
-        <div className="md:w-1/3 flex justify-center items-center p-1">
+        <div className="md:w-1/3 flex justify-center items-center p-4 md:p-1">
           <Image
             src="/courses-banner.png"
             alt="courses"
