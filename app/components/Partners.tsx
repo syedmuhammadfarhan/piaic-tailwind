@@ -11,16 +11,16 @@ export default function Partners() {
       </h1>
 
       <RevealWrapper mobile={false} reset={false}>
-        <div className="md:flex justify-center pb-10">
+        <div className=" md:flex justify-center pb-10">
           <Image
-            className="mb-8"
+            className="mb-8 "
             src="/saylaniLogo.png"
             alt="saylani"
             width={250}
             height={100}
           />
           <Image
-            className="mx-6"
+            className="mx-6 "
             src="/panacloudLogo.svg"
             alt="panacloud"
             width={100}

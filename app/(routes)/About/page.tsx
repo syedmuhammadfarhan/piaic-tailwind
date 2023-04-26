@@ -25,7 +25,7 @@ export default function About() {
         </div>
         <div>
           <h1 className="text-2xl mt-4">{aboutData.name}</h1>
-          <p className="text-sm text-white mb-4">{aboutData.designation}</p>
+          <p className="text-xs text-white mb-4 px-2">{aboutData.designation}</p>
           <div className="flex justify-center">
             <SocialButton href={"https://www.facebook.com/Dr.ArifAlvi/"}>
               <FaFacebook size={13} />

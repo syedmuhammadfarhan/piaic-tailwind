@@ -39,8 +39,8 @@ export default function Programs() {
           weekdays. It employs a hybrid teaching format, with core onsite
           classes complemented by online Zoom laboratories and recorded videos.
         </p>
-        <div className="md:animate-bounce w-10 h-10 rounded-full border-2 border-black flex justify-center items-center mt-10">
-          <AiOutlineArrowDown className="color-purple" />
+        <div className="md:animate-bounce w-10 h-10 rounded-full border-2 border-green-500 flex justify-center items-center mt-10">
+          <AiOutlineArrowDown color="blue" />
         </div>
       </center>
     </div>

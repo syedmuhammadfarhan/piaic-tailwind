@@ -30,13 +30,15 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        <div className="max-w-[80%] flex flex-col md:flex-row md:justify-between">
+        <div className="lg:max-w-[80%] flex flex-col md:flex-row justify-between">
           <div className="flex justify-center items-center my-8">
             <Image src="/pakmap.png" alt="" height="300" width="300" />
           </div>
           <div className="pt-20 mb-10">
-            <div className="font-bold border-b-2 border-green-300 max-w-fit">
-              <p>City by City Roadmap</p>
+            <div className="font-bold  flex items-center justify-center md:justify-start">
+              <p className="border-b-2 border-green-300">
+                City by City Roadmap
+              </p>
             </div>
             {cityList.map((items, i) => {
               return (
@@ -66,7 +68,7 @@ export default function HowItWorks() {
             <div className="flex md:hidden">
               <AiOutlineArrowDown size="20" color="white" />
             </div>
-            <div className="flex flex-col justify-center items-center md:justify-star">
+            <div className="flex flex-col justify-center md:justify-star">
               <div className="pb-10 border-slate-400 border-b-2 text-justify text-sm md:text-md">
                 <p>
                   To participate in the program and become eligible for the most
@@ -76,7 +78,7 @@ export default function HowItWorks() {
                 </p>
               </div>
 
-              <div className="flex justify-left items-center text-justify pt-10 text-sm md:text-md">
+              <div className="text-justify pt-10 text-sm md:text-md">
                 <ul>
                   <li>
                     1- Signup at PIAIC Portal.{" "}

@@ -20,7 +20,7 @@ export default function Courses() {
                   delay={200}
                   duration={1000}
                   distance="500px"
-                  reset={true}
+                  reset={false}
                   viewOffset={{ top: 25, right: 0, bottom: 10, left: 5 }}
                 >
                   <div className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4">

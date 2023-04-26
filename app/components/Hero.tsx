@@ -13,9 +13,9 @@ export default function Hero() {
           Presidential Initiative
         </h2>
 
-        <h2 className="text-3xl mb-2 text-center md:text-start">
+        <h3 className="text-3xl mb-2 text-center md:text-start">
           for Artificial Intelligence & Computing
-        </h2>
+        </h3>
 
         <div className="md:pr-4 lg:pr-52 leading-6 text-justify text-sm text-black">
           <p>

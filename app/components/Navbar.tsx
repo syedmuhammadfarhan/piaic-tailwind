@@ -41,7 +41,7 @@ export default function Navbar() {
                 return (
                   <div
                     key={i}
-                    className="hover:border-b-2 border-green-600 text-sm font-semibold"
+                    className="hover:border-b-2 border-green-600 text-xs font-bold"
                     onClick={() => setProMenu(false)}
                   >
                     <Link href={items.href}>{items.navList}</Link>
@@ -50,20 +50,21 @@ export default function Navbar() {
               })}
 
               <div
-                className="hover:border-b-2 border-green-600 text-sm font-semibold cursor-pointer "
+                className="hover:border-b-2 border-green-600 text-xs font-bold cursor-pointer "
                 onClick={() => setProMenu(!proMenu)}
               >
                 Available Programs
                 {proMenu && (
+                  
                   <div
-                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.6rem] left-[69] py-2 "
+                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.4rem] left-[69] py-2 "
                     onMouseLeave={() => setProMenu(false)}
                   >
                     {programsArray.map((items, i) => {
                       return (
                         <div
                           key={i}
-                          className="flex p-2 text-sm hover:bg-sky-500 font-light"
+                          className="flex p-2 text-xs hover:bg-sky-500 font-normal"
                         >
                           <Link href={items.href}>{items.programList}</Link>
                         </div>
@@ -77,13 +78,13 @@ export default function Navbar() {
         </div>
       </RevealWrapper>
 
-      <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-3 py-[0.4rem] rounded-full text-white text-sm hover:bg-green-500">
+      <button className="hover:scale-95 hidden md:flex bg-emerald-600 m-2 mr-3 px-3 py-[0.4rem] rounded-full text-white text-xs hover:bg-green-500">
         <Link
           className="flex items-center gap-1"
           href="https://portal.piaic.org/"
         >
           Apply
-          <AiOutlineDoubleRight size={13} />
+          <AiOutlineDoubleRight size={11} />
         </Link>
       </button>
 
@@ -95,8 +96,8 @@ export default function Navbar() {
       {/* onClick Hamburger menu items*/}
 
       {mobNav && (
-        <div className="md:hidden fixed left-0 top-0 w-full h-screen bg-black/70">
-          <div className="fixed right-0 top-0 w-[100%] sm:w-[60%] md:[45%] h-screen bg-gradient-to-r from-blue-400 to-green-300 p-4 ease-in duration-500">
+        <div className="fixed md:hidden left-0 top-0 w-full h-screen bg-black/70">
+          <div className="fixed z-20 right-0 top-0 w-[100%] sm:w-[60%] md:[45%] h-screen bg-gradient-to-r from-blue-400 to-green-300 p-4 ease-in duration-500">
             <div className="flex justify-between">
               <Image
                 src="/PIAICLogo.webp"

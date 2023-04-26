@@ -20,9 +20,9 @@ export default function Images() {
           return (
             <div
               key={i}
-              className="md:flex flex-between justify-center items-center p-2 bg-gradient-to-r from-green-200 to-white pt-10"
+              className="flex flex-col lg:flex-row justify-center items-center p-2 bg-gradient-to-r from-green-200 to-white pt-10"
             >
-              <div className="basis-1/2 flex justify-center items-center">
+              <div className="basis-1/3 flex justify-center items-center">
                 <div className="md:h-[24rem] md:w-[35rem] overflow-hidden flex">
                   <Image
                     className="object-cover border-8 border-white shadow-2xl"
@@ -33,7 +33,7 @@ export default function Images() {
                   />
                 </div>
               </div>
-              <div className="basis-1/2 flex flex-col justify-center items-center text-justify p-4 md:p-32 md:h-[24rem] md:w-[35rem]">
+              <div className="basis-1/2 flex flex-col justify-center items-center text-justify p-4 sm:p-8 md:h-[24rem] md:w-[35rem]">
                 <h2 className="text-lg md:text-xl font-extrabold">
                   {items.heading}
                 </h2>
