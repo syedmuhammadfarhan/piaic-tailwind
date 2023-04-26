@@ -8,7 +8,7 @@ import { RevealWrapper } from "next-reveal";
 export default function Courses() {
   return (
     <center>
-      <div className="max-w-fit sm:flex-wrap md:flex justify-center gap-3 mt-8 mb-16">
+      <div className="w-[60%] flex-wrap flex justify-center items-center gap-5 lg:gap-4 mt-8 mb-16">
         {CoursesArray.map(
           (items: { image: string; courseName: string; href: string }, i) => {
             return (
@@ -42,7 +42,7 @@ export default function Courses() {
                       className="flex justify-center items-center"
                       href={items.href}
                     >
-                      <button className="text-sm text-slate-500 md:animate-pulse hover:scale-110 m-2">
+                      <button className="text-sm text-black md:animate-pulse hover:scale-110 m-2">
                         Learn more
                       </button>
                     </Link>

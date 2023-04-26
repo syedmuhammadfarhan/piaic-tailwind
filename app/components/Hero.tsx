@@ -5,9 +5,11 @@ export default function Hero() {
   return (
     //  bg-[url('/bg1.jpeg')]
     <div className="md:flex items-center h-auto bg-gradient-to-r from-blue-400 to-green-300">
+      {/* 1st div */}
       <div className="md:basis-2/4 px-14 pt-10 items-center">
         <Image src="/president.png" alt="arif alvi" width={300} height={300} />
       </div>
+      {/* 2nd div */}
       <div className="md:basis-3/4 p-7">
         <h2 className="text-4xl font-bold mb-2 text-center md:text-start">
           Presidential Initiative

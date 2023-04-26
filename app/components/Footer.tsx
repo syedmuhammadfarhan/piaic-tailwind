@@ -148,9 +148,9 @@ export default function Footer() {
             <FaYoutube size={13} />
           </SocialButton>
         </div>
-        <div className="text-black font-normal">Prepared By Syed Muhammad Farhan</div>
+
         <div>
-          <p className="text-xs mx-3 pt-2">Powered by</p>
+          <p className="text-xs px-3 pt-2">Powered by</p>
 
           <Image
             className="mx-2"

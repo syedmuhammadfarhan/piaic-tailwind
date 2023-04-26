@@ -19,68 +19,69 @@ export default function AvailableProgramsD({
 }) {
   return (
     <div>
-      <div className="md:flex md:justify-between md:h-96 bg-gradient-to-r from-blue-400 to-green-300 px-8 pb-6">
+      <div className="md:flex justify-between items-center lg:h-96 bg-gradient-to-r from-blue-400 to-green-300">
         {params.name === "wmd" && (
-          <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
+          <div className="md:w-2/3 py-6 md:py-16 md:pl-14">
+            <h1 className="text-xl md:text-2xl font-extrabold text-center md:text-left md:mb-3 md:pr-16 mb-4 px-3 md:px-0">
               {progBanner.wmdBanner.heading}
             </h1>
-            <p className="text-slate-600 text-sm md:text-md text-center md:text-justify md:pr-64">
+            <p className="text-slate-600 text-sm md:text-md text-justify md:pr-16 px-4 md:px-0">
               {progBanner.wmdBanner.description}
             </p>
           </div>
         )}
         {params.name === "ai" && (
-          <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
+          <div className="md:w-2/3 py-6 md:py-16 md:pl-14">
+            <h1 className="text-xl md:text-2xl font-extrabold text-center md:text-left md:mb-3 md:pr-16 mb-4 px-3 md:px-0">
               {progBanner.aiBanner.heading}
             </h1>
-            <p className="text-slate-600 text-sm md:text-md text-center md:text-justify md:pr-64">
+            <p className="text-slate-600 text-sm md:text-md text-justify md:pr-16 px-4 md:px-0">
               {progBanner.aiBanner.description}
             </p>
           </div>
         )}
         {params.name === "cnc" && (
-          <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
+          <div className="md:w-2/3 py-6 md:py-16 md:pl-14">
+            <h1 className="text-xl md:text-2xl font-extrabold text-center md:text-left md:mb-3 md:pr-16 mb-4 px-3 md:px-0">
               {progBanner.cncBanner.heading}
             </h1>
-            <p className="text-slate-600 text-sm md:text-md text-center md:text-justify md:pr-64">
+            <p className="text-slate-600 text-sm md:text-md text-justify md:pr-16 px-4 md:px-0">
               {progBanner.cncBanner.description}
             </p>
           </div>
         )}
         {params.name === "iot" && (
-          <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
+          <div className="md:w-2/3 py-6 md:py-16 md:pl-14">
+            <h1 className="text-xl md:text-2xl font-extrabold text-center md:text-left md:mb-3 md:pr-16 mb-4 px-3 md:px-0">
               {progBanner.iotBanner.heading}
             </h1>
-            <p className="text-slate-600 text-sm md:text-md text-center md:text-justify md:pr-64">
+            <p className="text-slate-600 text-sm md:text-md text-justify md:pr-16 px-4 md:px-0">
               {progBanner.iotBanner.description}
             </p>
           </div>
         )}
         {params.name === "bio" && (
-          <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
+          <div className="md:w-2/3 py-6 md:py-16 md:pl-14">
+            <h1 className="text-xl md:text-2xl font-extrabold text-center md:text-left md:mb-3 md:pr-16 mb-4 px-3 md:px-0">
               {progBanner.bioBanner.heading}
             </h1>
-            <p className="text-slate-600 text-sm md:text-md text-center md:text-justify md:pr-64">
+            <p className="text-slate-600 text-sm md:text-md text-justify md:pr-16 px-4 md:px-0">
               {progBanner.bioBanner.description}
             </p>
           </div>
         )}
         {params.name === "npa" && (
-          <div className="md:w-2/3 py-10 md:py-20 md:pl-28">
-            <h1 className="text-2xl md:text-3xl font-extrabold text-center md:text-left md:mb-3 md:pr-64 mb-4">
+          <div className="md:w-2/3 py-6 md:py-16 md:pl-14">
+            <h1 className="text-xl md:text-2xl font-extrabold text-center md:text-left md:mb-3 md:pr-16 mb-4 px-3 md:px-0">
               {progBanner.npaBanner.heading}
             </h1>
-            <p className="text-slate-600 text-sm md:text-md text-center md:text-justify md:pr-64">
+            <p className="text-slate-600 text-sm md:text-md text-justify md:pr-16 px-4 md:px-0">
               {progBanner.npaBanner.description}
             </p>
           </div>
         )}
-        <div className="md:w-1/2 md:flex md:justify-center items-center">
+
+        <div className="md:w-1/3 flex justify-center items-center p-1">
           <Image
             src="/courses-banner.png"
             alt="courses"
@@ -233,7 +234,7 @@ export default function AvailableProgramsD({
             npaQuarters.map((items, i) => (
               <div
                 key={i}
-                className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300"
+                className="border-2 rounded-3xl w-56 h-auto bg-gradient-to-r from-blue-400 to-green-300 mb-4"
               >
                 <div className="flex items-center justify-center w-full">
                   <div className="flex h-40 w-40 rounded-full border-2 overflow-hidden mt-3 justify-center items-center text-lg font-bold bg-white">

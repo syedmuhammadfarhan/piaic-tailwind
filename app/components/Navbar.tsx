@@ -57,7 +57,7 @@ export default function Navbar() {
                 {proMenu && (
                   
                   <div
-                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.4rem] left-[69] py-2 "
+                    className="bg-gradient-to-r from-blue-400 to-green-300 h-auto w-72 fixed top-[2.5rem] left-[69] py-2 "
                     onMouseLeave={() => setProMenu(false)}
                   >
                     {programsArray.map((items, i) => {
