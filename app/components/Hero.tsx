@@ -39,7 +39,7 @@ export default function Hero() {
             technologies. Experts are calling this the 4th industrial
             revolution. We want Pakistan to become a global hub for AI, data
             science, cloud native computing, edge computing, blockchain,
-            augmented reality, and internet of things."
+            augmented reality, and internet of things.
           </p>
         </div>
         <div className="pt-10 flex justify-end">
