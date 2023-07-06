@@ -1,6 +1,18 @@
 
+### Link
 
-https://piaic-tailwind-theta.vercel.app/
+Website is deployed in vercel.
+- [Live URL](https://piaic-tailwind-theta.vercel.app/
+)
+
+
+### Screenshot
+
+![Screenshot of homepage](/public/Screenshot-PIAIC.png)
+
+
+
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
